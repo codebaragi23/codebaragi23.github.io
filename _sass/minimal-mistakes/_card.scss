@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Card
+   ========================================================================== */
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  //background-color: #5e616c;
+  background-color: $lighter-gray;
+  //border: 1px solid rgba(94, 97, 108, 0.125);
+  border-radius: 0.25rem;
+  margin: 1.25em;
+  padding: 1.25em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0.5em 0.1em 0.3em;
+    line-height: 1.2;
+    font-family: $header-font-family;
+    font-weight: normal;
+  }
+  
+  p {
+    margin-bottom: 1.3em;
+    font-size: $type-size-7;
+  }
+
+  figure {
+    display: block;
+  }
+
+  img {
+    max-width: none;
+    margin-top: 0.5em;
+  }
+}
+
+.card__item-logo {
+  width: 100px;
+  height: 100px;
+}

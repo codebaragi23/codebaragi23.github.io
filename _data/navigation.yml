@@ -1,0 +1,38 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Categories"
+    url: /categories/
+  - title: "Posts"
+    url: /posts/
+  - title: "Tags"
+    url: /tags/
+
+
+# # sidebar navigation list sample
+# sidebar-sample:
+#   - title: "Parent Page A"
+#     children:
+#       - title: "Child Page A1"
+#         url: /child-page-a1/
+#       - title: "Child Page A2"
+#         url: /child-page-a2/
+#       - title: "Child Page A3"
+#         url: /child-page-a3/
+#       - title: "Child Page A4"
+#         url: /child-page-a4/
+#   - title: "Parent Page B"
+#     children:
+#       - title: "Child Page B1"
+#         url: /child-page-b1/
+#       - title: "Child Page B2"
+#         url: /child-page-b2/
+#       - title: "Child Page B3"
+#         url: /child-page-b3/
+#       - title: "Child Page B4"
+#         url: /child-page-b4/
+#       - title: "Child Page B5"
+#         url: /child-page-b5/
