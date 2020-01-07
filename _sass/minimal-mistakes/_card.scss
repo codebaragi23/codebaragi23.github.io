@@ -2,6 +2,15 @@
    Card
    ========================================================================== */
 
+#main {
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
+}
+
 .card {
   position: relative;
   display: flex;
@@ -41,9 +50,9 @@
     max-width: none;
     margin-top: 0.5em;
   }
-}
 
-.card__item-logo {
-  width: 100px;
-  height: 100px;
+  .card__item-logo {
+    width: 100px;
+    height: 100px;
+  }
 }

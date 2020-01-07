@@ -2,104 +2,108 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="col-lg-8">
+<div id="main" role="main">
 
-    {% if site.author.about %}
-      <div class="card">
-        <h1 class="card-title">About</h1>
-        <p>{{site.author.about.description}}</p>
-      </div>
-    {% endif %}
-
-    {% if site.author.educations %}
-      <div class="card">
-        <h1 class="card-title"> Education </h1>
-        {% for education in site.author.educations %}
-          {% if education.visible == true %}
-            <div class="row">
-              <div class="col-md-2">
-                <img src="/assets/images/{{education.logo}}" class="card__item-logo"/>
-              </div>
-              <div class="col-md-6">
-                <h3 class="education-pos"> {{education.position}}</h3>
-                <h6 class="education-title">{{education.title}}</h6>
-                <p class="education-desc"> {{education.description}} </p>
-                <p><a href="{{education.url}}">{{education.url}}</a></p>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}  
-      </div>
-    {% endif %}
-
-    {% if site.author.careers %}
-      <div class="card">
-        <h1 class="card-title">Careers</h1>
-        {% for career in site.author.careers %}
-          {% if career.visible == true %}
-            <div class="row">
-              <div class="col-md-2">
-                  {% if career.logo %}
-                  <img src="/assets/images/{{career.logo}}" class="card__item-logo"/>
-                  {% endif %}
-              </div>
-              <div class="col-md-6">
-                <h3 class="career-pos"> {{career.position}}</h3>
-                <h6 class="career-title"> {{career.title}}</h6>
-                <p class="career-desc"> {{career.description}} </p>
-                <p><a href="{{career.url}}">{{career.url}}</a></p> 
-              </div>
-            </div>
-          {% endif %}    
-        {% endfor %}  
-      </div>
-    {% endif %}
-
-    {% if site.author.projects %}
-      <div class="card">
-        <h1 class="card-title">Projects</h1>
-        {% for project in site.author.projects %}
-          {% if project.visible == true %}
-            <div class="row">
-              <div class="col-md-2">
-                  {% if project.logo %}
-                  <img src="/assets/images/{{project.logo}}" class="card__item-logo"/>
-                  {% endif %}
-              </div>
-              <div class="col-md-6">
-                <h3 class="project-title"> {{project.title}}</h3>
-                <p class="project-desc"> {{project.description}} </p>
-                <p><a href="{{project.url}}">{{project.url}}</a></p> 
-              </div>
-            </div>
-          {% endif %}    
-        {% endfor %}  
-      </div>
-    {% endif %}
-  
-  </div>
-
-  <div class="col-lg-4">
-    <div class="card">
-      <h1> Skills </h1>
-      <p> HTML , CSS , Javascript , PHP, Python, C, Adobe XD, Inkscape, Git, Linux </p>
-    </div>
-
-    {% if site.author.wakatime_username %}
-      <div class="card">
-        <h1> Coding Activity </h1>
-        <!-- Pie Chart -->
-        <figure>
-          <embed src="https://wakatime.com/share/@{{site.author.wakatime_username}}/f540df00-f2d1-46e2-a360-da7e13ed8a66.svg"></embed>
-        </figure>
-
-        <!-- Hours Coded -->
-        <figure>
-          <embed src="https://wakatime.com/share/@{{site.author.wakatime_username}}/1550a9f1-d41a-4745-92a0-181a6fbb2456.svg"></embed>
-        </figure>
-      </div>
-    {% endif %}
-  </div>
+  <div class="row">
     
+    <div class="col-lg-8">
+      {% if site.author.about %}
+        <div class="card">
+          <h1 class="card-title">About</h1>
+          <p>{{site.author.about.description}}</p>
+        </div>
+      {% endif %}
+  
+      {% if site.author.educations %}
+        <div class="card">
+          <h1 class="card-title"> Education </h1>
+          {% for education in site.author.educations %}
+            {% if education.visible == true %}
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="/assets/images/{{education.logo}}" class="card__item-logo"/>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="education-pos"> {{education.position}}</h3>
+                  <h6 class="education-title">{{education.title}}</h6>
+                  <p class="education-desc"> {{education.description}} </p>
+                  <p><a href="{{education.url}}">{{education.url}}</a></p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}  
+        </div>
+      {% endif %}
+  
+      {% if site.author.careers %}
+        <div class="card">
+          <h1 class="card-title">Careers</h1>
+          {% for career in site.author.careers %}
+            {% if career.visible == true %}
+              <div class="row">
+                <div class="col-md-2">
+                    {% if career.logo %}
+                    <img src="/assets/images/{{career.logo}}" class="card__item-logo"/>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <h3 class="career-pos"> {{career.position}}</h3>
+                  <h6 class="career-title"> {{career.title}}</h6>
+                  <p class="career-desc"> {{career.description}} </p>
+                  <p><a href="{{career.url}}">{{career.url}}</a></p> 
+                </div>
+              </div>
+            {% endif %}    
+          {% endfor %}  
+        </div>
+      {% endif %}
+  
+      {% if site.author.projects %}
+        <div class="card">
+          <h1 class="card-title">Projects</h1>
+          {% for project in site.author.projects %}
+            {% if project.visible == true %}
+              <div class="row">
+                <div class="col-md-2">
+                    {% if project.logo %}
+                    <img src="/assets/images/{{project.logo}}" class="card__item-logo"/>
+                    {% endif %}
+                </div>
+                <div class="col-md-6">
+                  <h3 class="project-title"> {{project.title}}</h3>
+                  <p class="project-desc"> {{project.description}} </p>
+                  <p><a href="{{project.url}}">{{project.url}}</a></p> 
+                </div>
+              </div>
+            {% endif %}    
+          {% endfor %}  
+        </div>
+      {% endif %}
+    
+    </div>
+  
+    <div class="col-lg-4">
+      <div class="card">
+        <h1> Skills </h1>
+        <p> HTML , CSS , Javascript , PHP, Python, C, Adobe XD, Inkscape, Git, Linux </p>
+      </div>
+  
+      {% if site.author.wakatime_username %}
+        <div class="card">
+          <h1> Coding Activity </h1>
+          <!-- Pie Chart -->
+          <figure>
+            <embed src="https://wakatime.com/share/@{{site.author.wakatime_username}}/f540df00-f2d1-46e2-a360-da7e13ed8a66.svg"></embed>
+          </figure>
+  
+          <!-- Hours Coded -->
+          <figure>
+            <embed src="https://wakatime.com/share/@{{site.author.wakatime_username}}/1550a9f1-d41a-4745-92a0-181a6fbb2456.svg"></embed>
+          </figure>
+        </div>
+      {% endif %}
+    </div>
+      
+  </div>
+
 </div>
