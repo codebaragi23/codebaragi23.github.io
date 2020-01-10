@@ -67,7 +67,7 @@
 /* remove border*/
 .page__content {
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     border-bottom: none;
   }
 }
@@ -91,7 +91,41 @@
   overflow: hidden;
 
   img {
+    position: center;
     width: 100%;
+    height: 30%;
+  }
+
+  &--overlay {
+    position: relative;
+    border-radius: $border-radius;
+    height: 30%;
+    padding: 20% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-animation: $intro-transition;
+    animation: $intro-transition;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+
+    .archive__item-title,
+    .archive__item-caption {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .archive__item-title {
+      padding: 2px 5px;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      font-size: $type-size-5;
+      text-align: center;
+      @include breakpoint($large) {
+        font-size: $type-size-4;
+      }
+    }
   }
 }
 
@@ -232,8 +266,9 @@
 
 .feature__wrapper {
   @include clearfix();
-  margin-bottom: 2em;
-  border-bottom: 1px solid $border-color;
+  margin-top: 0;
+  margin-bottom: 4em;
+  border-top: 1px solid $border-color;
 
   .archive__item-title {
     margin-bottom: 0;
@@ -242,25 +277,32 @@
 
 .feature__item {
   position: relative;
-  margin-bottom: 2em;
+  margin-top: 1em;
   font-size: 1.125em;
+  border: 1px solid  $border-color;
+  border-radius: 0.25rem;
 
   @include breakpoint($small) {
     float: left;
     margin-bottom: 0;
-    width: span(4 of 12);
+    width: span(3 of 12);
 
-    &:nth-child(3n + 1) {
+    &:nth-child(4n + 1) {
       clear: both;
       margin-left: 0;
     }
 
-    &:nth-child(3n + 2) {
+    &:nth-child(4n + 2) {
       clear: none;
       margin-left: gutter(of 12);
     }
 
-    &:nth-child(3n + 3) {
+    &:nth-child(4n + 3) {
+      clear: none;
+      margin-left: gutter(of 12);
+    }
+
+    &:nth-child(4n + 4) {
       clear: none;
       margin-left: gutter(of 12);
     }
@@ -272,6 +314,7 @@
   }
 
   .archive__item-body {
+    margin-top: 0.5em;
     padding-left: gutter(1 of 12);
     padding-right: gutter(1 of 12);
   }

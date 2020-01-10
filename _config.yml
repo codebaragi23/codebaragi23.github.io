@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name      : *name
-  avatar    : assets/images/bio-photo.jpg # path of avatar image, e.g. /assets/images/bio-photo.jpg
+  avatar    : assets/images/bio-photo.png # path of avatar image, e.g. /assets/images/bio-photo.jpg
   bio       : SW Engineer
   location  : South Korea
   email     : codebaragi23@gmail.com
@@ -135,30 +135,24 @@ author:
   # about section data
   about: 
     description : GitHub와 함께 GitHub Pages를 이용한 개발자 블로그를 운영해 보고자 합니다.
-                  메인으로 Front-End Developer로 활동 중이지만 Back-End Developer 경험도 있는 초급 수준의 Full-stack Developer입니다.
+                  메인으로 C/C++ 기반 요소 기술 개발을 주로 하였고 UI 개발을 겸하여 MFC, Qt의 경험이 있습니다.
 
   # educations section data
   educations:
-    - title       : MIT
-      logo        : mit.png
-      url         : https://mit.org
-      position    : CS Engineer
-      description : Bachelor of Technology
+    - title       : KwangWoon Univ.
+      logo        : kwu.png
+      url         : https://www.kw.ac.kr/
+      position    : Software Engineer
+      description : Master of Science in Computer Engineering
       visible     : true
 
   # careers section data
   careers:
-    - title       : Google
-      logo        : google.png
-      url         : https://google.com
+    - title       : LGE
+      logo        : lge.png
+      url         : https://www.lge.co.kr/
       position    : Software Engineer
-      description : Worked on various Google Products
-      visible     : true
-    - title       : Microsoft
-      logo        : microsoft.png
-      url         : https://microsoft.com
-      position    : Azure Developer
-      description : Worked on various Azure Cloud Products
+      description : Worked on various Smartphone Camera Technology
       visible     : true
 
   # project section data
@@ -175,8 +169,7 @@ author:
       visible     : true
 
   # skill section data
-  skills: HTML , CSS , Javascript , PHP, Python,
-      Adobe XD, Inkscape, Git, Linux
+  skills: C/C++, MFC, Matlab, Java, Android, Python, Git, Linux
 
   # wakatime username (coding activity)
   wakatime_username: sujaykundu777
@@ -327,7 +320,6 @@ compress_html:
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
   # _posts
@@ -337,6 +329,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      write_date: true
       read_time: true
       comments: # true # blog comment
       share: true
@@ -349,6 +342,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      write_date: false
       read_time: false
       comments: false
       share: true

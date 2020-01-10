@@ -5,45 +5,69 @@
 {% endif %}
 
 <div class="feature__wrapper">
-  {% for f in feature_row %}
+  {% for feature in feature_row %}
 
-    {% if f.url contains "://" %}
-      {% capture f_url %}{{ f.url }}{% endcapture %}
+    {% if feature.url contains "://" %}
+      {% capture feature_url %}{{ feature.url }}{% endcapture %}
     {% else %}
-      {% capture f_url %}{{ f.url | relative_url }}{% endcapture %}
+      {% capture feature_url %}{{ feature.url | relative_url }}{% endcapture %}
     {% endif %}
 
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">
-        {% if f.image_path %}
+        {% if feature.overlay_color or feature.overlay_image %}
+
+          {% if feature.overlay_image contains "://" %}
+            {% capture overlay_img_path %}{{ feature.overlay_image }}{% endcapture %}
+          {% elsif feature.overlay_image %}
+            {% capture overlay_img_path %}{{ feature.overlay_image | relative_url }}{% endcapture %}
+          {% endif %}
+
+          {% if feature.overlay_filter contains "rgba" %}
+            {% capture overlay_filter %}{{ feature.overlay_filter }}{% endcapture %}
+          {% elsif feature.overlay_filter %}
+            {% capture overlay_filter %}rgba(0, 0, 0, {{ feature.overlay_filter }}){% endcapture %}
+          {% endif %}
+
+          <div class="archive__item-teaser{% if feature.overlay_color or feature.overlay_image %}--overlay{% endif %}"
+            style="{% if feature.overlay_color %}background-color: {{ feature.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}">
+            <h1 class="archive__item-title" itemprop="headline">{{ feature.title }}</h1>
+          </div>
+
+        {% else if feature.image_path %}
+
+          {% if feature.image_path contains "://" %}
+            {% capture img_path %}{{ feature.image_path }}{% endcapture %}
+          {% else %}
+            {% capture img_path %}{{ feature.image_path | relative_url }}{% endcapture %}
+          {% endif %}
+
           <div class="archive__item-teaser">
-            <img src=
-              {% if f.image_path contains "://" %}
-                "{{ f.image_path }}"
-              {% else %}
-                "{{ f.image_path | relative_url }}"
-              {% endif %}
-            alt="{% if f.alt %}{{ f.alt }}{% endif %}">
-            {% if f.image_caption %}
-              <span class="archive__item-caption">{{ f.image_caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+            <img src= "{{ img_path }}" alt="{% if feature.alt %}{{ feature.alt }}{% endif %}">
+            {% if feature.caption %}
+            <span class="archive__item-caption">{{ feature.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
             {% endif %}
           </div>
         {% endif %}
 
         <div class="archive__item-body">
-          {% if f.title %}
-            <h2 class="archive__item-title">{{ f.title }}</h2>
-          {% endif %}
+          {% unless feature.overlay_color or feature.overlay_image %}
+            {% if feature.title %}
+              <h3 class="archive__item-title">{{ feature.title }}</h3>
+            {% endif %}
+          {% endunless %}
 
-          {% if f.excerpt %}
+          {% if feature.excerpt %}
             <div class="archive__item-excerpt">
-              {{ f.excerpt | markdownify }}
+              {{ feature.excerpt | markdownify }}
             </div>
           {% endif %}
 
-          {% if f.url %}
-            <p><a href="{{ f_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          <div class="text-right">
+          {% if feature.url %}
+            <p><a href="{{ feature_url }}" class="btn {{ feature.btn_class }}">{{ feature.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
           {% endif %}
+          </div>
         </div>
       </div>
     </div>

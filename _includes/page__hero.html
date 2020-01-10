@@ -45,9 +45,14 @@
       {% if page.header.show_overlay_excerpt != false and page.excerpt %}
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
-      {% if page.read_time %}
-        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-      {% endif %}
+      <p class="page__meta">
+        {% if page.write_date and page.date %}
+          <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ page.date | date: "%B %d, %Y" }},
+        {% endif %}
+        {% if page.read_time %}
+          <i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}
+        {% endif %}
+      </p>
       {% if page.header.cta_url %}
         <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}

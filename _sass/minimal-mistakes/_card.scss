@@ -47,12 +47,14 @@
   }
 
   img {
-    max-width: none;
+    max-width: 120px;
     margin-top: 0.5em;
   }
 
   .card__item-logo {
-    width: 100px;
-    height: 100px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 120px;
   }
 }

@@ -83,10 +83,12 @@ layout: default
     </div>
   
     <div class="col-lg-4">
-      <div class="card">
-        <h1> Skills </h1>
-        <p> HTML , CSS , Javascript , PHP, Python, C, Adobe XD, Inkscape, Git, Linux </p>
-      </div>
+      {% if site.author.skills %}
+        <div class="card">
+          <h1> Skills </h1>
+          <p class=skills>{{site.author.skills}}</p>
+        </div>
+      {% endif %}
   
       {% if site.author.wakatime_username %}
         <div class="card">
