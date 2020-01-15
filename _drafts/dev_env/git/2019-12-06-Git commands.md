@@ -1,5 +1,5 @@
 ---
-title: "Git 기본 명령어"
+title: Git 기본 명령어
 categories: 
   - Git
 tags: 

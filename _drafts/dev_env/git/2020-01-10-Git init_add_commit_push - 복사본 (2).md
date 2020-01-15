@@ -1,5 +1,5 @@
 ---
-title: Git 명령어(1) init, add, commit, status, push 하기
+title: Git 명령어(2)
 categories: 
   - Git
 tags: 

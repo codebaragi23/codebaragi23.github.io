@@ -1,5 +1,5 @@
 ---
-title: "윈도우에서 지킬 설치 및 블로그 생성하기"
+title: 윈도우에서 지킬 설치 및 블로그 생성하기
 categories:
   - GitHub Pages
 tags:
@@ -7,10 +7,18 @@ tags:
   - GitHub Pages
   - Jekyll 설치
 toc: true
+
+header:
+  teaser: https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+  overlay_image: https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+  overlay_filter: 0.5
+  caption: "Photo by Thought Catalog on Unsplash"
+
 icon: fa-github
 ---
 
 GitHub Pages로 블로그를 운영하면서 theme를 customize할 필요가 없다면 지킬을 설치 할 필요는 없습니다.
+
 그러나 자신에게 맞는 theme가 없거나 기능을 추가하고 싶다면 지킬을 설치하고 로컬에서 즉시 확인 할 수 있습니다.
 이 카테고리는 GitHub Pages를 운영하면서 customize한 요령들을 기록하고자 합니다.
 

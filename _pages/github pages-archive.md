@@ -1,7 +1,7 @@
 ---
 title: GitHub Pages
 layout: category
-permalink: /categories/github_pages/
+permalink: /github_pages/
 taxonomy: GitHub Pages
 
 entries_layout: grid

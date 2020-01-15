@@ -181,9 +181,11 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin: 0.5rem;
     color: $masthead-link-color;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: $type-size-7;
 
     &:hover {
       color: $masthead-link-color-hover;
@@ -195,7 +197,14 @@
     }
 
     &.site-title {
+      font-size: $type-size-5;
       margin-left: 0;
+      text-transform: none;
+    }
+
+    &.site-subtitle {
+      display: none;
+      text-transform: none;
     }
   }
 
@@ -272,8 +281,6 @@
     a {
       margin: 0;
       padding: 10px 20px;
-      font-size: $type-size-5;
-
       &:hover {
         color: $masthead-link-color-hover;
         background: $navicon-link-color-hover;
@@ -308,11 +315,6 @@
 
     li {
       display: block;
-      border-bottom: 1px solid $border-color;
-
-      &:last-child {
-        border-bottom: none;
-      }
     }
   }
 }

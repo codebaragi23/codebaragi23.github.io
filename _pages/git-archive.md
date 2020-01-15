@@ -1,7 +1,7 @@
 ---
 title: Git
 layout: category
-permalink: /categories/git/
+permalink: /git/
 taxonomy: Git
 
 entries_layout: grid

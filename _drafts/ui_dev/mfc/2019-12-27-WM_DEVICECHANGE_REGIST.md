@@ -1,5 +1,5 @@
 ---
-title: "임의의 Dialog에서 WM_DEVICECHANGE를 등록해서 사용하기(USB 장치 연결/해제 감지)"
+title: 임의의 Dialog에서 WM_DEVICECHANGE를 등록해서 사용하기(USB 장치 연결/해제 감지)
 categories: 
   - MFC
 tags: 

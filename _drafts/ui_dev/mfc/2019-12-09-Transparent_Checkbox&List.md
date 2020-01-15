@@ -1,5 +1,5 @@
 ---
-title: "체크박스, 리스트 등 투명하게 하기"
+title: 체크박스, 리스트 등 투명하게 하기
 categories:
   - MFC
 tags:

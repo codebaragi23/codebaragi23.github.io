@@ -15,7 +15,7 @@ $(document).ready(function() {
     if (show) {
       // fix
       $(".sidebar").addClass("sticky");
-    } else {
+  } else {
       // unfix
       $(".sidebar").removeClass("sticky");
     }
@@ -26,6 +26,18 @@ $(document).ready(function() {
   $(window).resize(function() {
     stickySideBar();
   });
+
+  $(window).scroll(function() {
+    if ($(".masthead").offset().top > 50) {
+        $(".masthead").addClass("short");
+        $(".site-logo").fadeOut(500);
+        $(".site-subtitle").fadeOut(500);
+      } else {
+        $(".masthead").removeClass("short");
+        $(".site-logo").fadeIn(500);
+        $(".site-subtitle").fadeIn(500);
+    }
+});
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function() {
@@ -40,6 +52,13 @@ $(document).ready(function() {
         $(".search-content").toggleClass("is--visible");
         $(".initial-content").toggleClass("is--hidden");
       }
+    }
+  });
+
+  // when clicking on a dropdown navbar menu, show the child links
+  $(".masthead__menu-item").on("click", ".item-link", function() {
+    if ($(".item-link").hasClass("dropdown")) {
+      $(".masthead__menu-item-child").toggleClass("is--visible");
     }
   });
 

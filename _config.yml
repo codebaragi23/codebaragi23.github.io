@@ -333,7 +333,7 @@ defaults:
       read_time: true
       comments: # true # blog comment
       share: true
-      related: true
+      related: "categories" # "categories", "tags"
       
   # _pages
   - scope:
@@ -346,4 +346,4 @@ defaults:
       read_time: false
       comments: false
       share: true
-      related: false
+      related:
