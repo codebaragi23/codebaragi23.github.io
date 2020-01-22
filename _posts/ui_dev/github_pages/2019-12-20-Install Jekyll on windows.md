@@ -29,7 +29,7 @@ GitHub Pages로 블로그를 운영하면서 theme를 customize할 필요가 없
 
 루비가 먼저 설치되고 (PATH 설정 포함) 이어서 개발자 킷 설치 과정이 이루어집니다.
 
-![](/assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic1.png)  
+![][pic1]
 
 
 
@@ -37,17 +37,17 @@ GitHub Pages로 블로그를 운영하면서 theme를 customize할 필요가 없
 
 저는 C:\Program File\ 하위의 경로에 설치하며 "multiple target patterns" 에러 메시지를 보고 한참동안이나 검색하기도 했습니다.
 
-![](/assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic2.png)  
+![][pic2]
 
 ## 2. 지킬 (Jekyll) 설치하기
 
 루비가 설치가 정상적으로 완료되면, 이제 지킬을 설치해야합니다. 먼저 윈도우 검색창에서 Ruby를 검색 후 Start Command Prompt with Ruby를 실행합니다.
 
-![](/assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic3.png)  
+![][pic3]
 
 콘솔창에서 gem 명령어를 통해 지킬과 실행에 필요한 패키지들을 설치합니다.
 
-```
+```ruby
 gem install bundler
 gem install jekyll
 gem install jekyll-feed
@@ -70,7 +70,7 @@ minimal-mistakes 테마를 사용하기 위해서는 아래의 2개 패키지를
 ## 3. 로컬에서 블로그 생성하기
 먼저 루비 콘솔창에서 이전 포스팅에서 생성한 블로그의 깃허브 저장소와 연동된 폴더로 이동한다. 윈도우 상에서는 인코딩 문제가 있을 수 있는데, 다음의 코드로 블로그 생성이 가능합니다.
 
-```
+```ruby
 # 블로그 저장 폴더로 이동
 # 인코딩 에러 발생시 다음의 코드를 실행
 chcp 65001
@@ -80,8 +80,14 @@ jekyll serve
 
 코드 실행 결과는 다음과 같습니다.
 
-![](/assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic4.png)
+![][pic4]
 
 브라우저를 열어 <http://127.0.0.1:4000/> 또는 <http://localhost:4000/>로 접속하면 로컬 상에서 블로그가 구현된 결과를 살펴 볼 수 있습니다.
 
 설치에 대한 조금 더 자세한 내용은 [지킬 한국어 페이지](https://jekyllrb-ko.github.io/)를 참고바랍니다.
+
+
+[pic1]: /assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic1.png
+[pic2]: /assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic2.png
+[pic3]: /assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic3.png
+[pic4]: /assets/images/posts/ui_dev/github_pages/2019-12-20-Install Jekyll on windows-pic4.png

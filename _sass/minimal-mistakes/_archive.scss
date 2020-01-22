@@ -171,8 +171,9 @@
 
 .archive {
   .grid__wrapper {
-    /* extend grid elements to the right */
+    border: 1px solid #f2f3f3;
 
+    /* extend grid elements to the right */
     @include breakpoint($large) {
       margin-right: -1 * $right-sidebar-width-narrow;
     }

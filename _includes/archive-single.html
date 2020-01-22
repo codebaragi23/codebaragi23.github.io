@@ -23,13 +23,19 @@
           alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
+    
+    {% if include.active == "true" %}
+      <h4 class="archive__item-title active" itemprop="headline">
+    {% else %}
+      <h4 class="archive__item-title" itemprop="headline">
+    {% endif %}
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a>
+          <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
+      </h4>
 
     <p class="page__meta">
       {% if post.write_date and post.date %}

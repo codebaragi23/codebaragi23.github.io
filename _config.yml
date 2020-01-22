@@ -19,7 +19,7 @@ locale                   : ko-KR
 title                    : Dev.Jinn
 title_separator          : 
 subtitle                 : 개발자 Jinn의 블로그 # site tagline that appears below site title in masthead
-name                     : &name Taejin Hwang
+name                     : &name Codebaragi23
 description              : Personal website.
 url                      : https://codebaragi23.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -109,7 +109,7 @@ analytics:
 author:
   name      : *name
   avatar    : assets/images/bio-photo.png # path of avatar image, e.g. /assets/images/bio-photo.jpg
-  bio       : SW Engineer
+  bio       : SW Engineer & Architect
   location  : South Korea
   email     : codebaragi23@gmail.com
   links:

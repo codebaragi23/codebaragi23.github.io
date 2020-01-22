@@ -280,14 +280,15 @@ icon: fa-github
 
 ### 스페이스 코드블록
 
-삽입하는 코드 앞에 스페이스 4개를 삽입하면 됩니다. (모든줄에 스페이스 4개 삽입해야 함) 스페이스 블록인 경우 코드의 구문을 체크하여 자동으로 신택스 하이라이팅을 합니다. (자동으로 해당 언어를 감지합니다.)
+삽입하는 코드 앞에 스페이스 4개를 삽입하면 됩니다.
+(모든줄에 스페이스 4개 삽입해야 함)
 
 예:
 
-```
-    def sum(a, b):
-        return a+b
-```
+>\`\`\`  
+    def sum(a, b):  
+    &nbsp;&nbsp;&nbsp;&nbsp;return a+b  
+\`\`\`
 
 결과:
 
@@ -296,25 +297,25 @@ icon: fa-github
 
 ### 언어지정 코드블록
 
-또는 다음과 같이 코드에 특정 언어(예:python)를 지정하여 코드블록을 설정할 수도 있습니다. Back Quote(\`) 문자 세개와 중괄호 사이에 코드의 언어를 입력하면 됩니다. (예:\```{.python})블록을 닫을 때는 마찬가지로 Back Quote(`) 문자 세개를 입력합니다.
+또는 다음과 같이 코드에 특정 언어(예:python)를 지정하여 코드블록을 설정할 수도 있습니다. Back Quote(\`) 문자 세개다음에 코드의 언어를 입력하면 됩니다. (예:\```python)블록을 닫을 때는 마찬가지로 Back Quote(`) 문자 세개를 입력합니다.
 
 _python 의 예_
 
->\`\`\`{.python}  
+>\`\`\`python  
  def sum(a, b):  
  &nbsp;&nbsp;&nbsp;&nbsp;return a+b  
  \`\`\`
 
 결과:
 
-```{.python}  
+```python  
 def sum(a, b):  
     return a+b  
 ```
 
 _java 의 예_
 
->\`\`\`{.java}  
+>\`\`\`java
  class Test {    
  &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.pritnln("hello world");  
@@ -324,7 +325,7 @@ _java 의 예_
 
 결과:
 
-```{.java}  
+```java
 class Test {
     public static void main(String[] args) {
         System.out.pritnln("hello world");
@@ -355,7 +356,7 @@ class Test {
 
 만약 코드블럭을 사용하고 싶지만 신택스 하이라이트 기능을 사용하고 싶지 않은 경우에는 다음과 같이 no-highlight를 사용 할 수 있습니다.
 
-> \`\`\`{.no-highlight}  
+> \`\`\`no-highlight  
  class Test {  
  &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.pritnln("hello world");  
@@ -365,7 +366,7 @@ class Test {
 
 결과:
 
-```{.no-highlight}
+```no-highlight
 class Test {
     public static void main(String[] args) {
         System.out.pritnln("hello world");

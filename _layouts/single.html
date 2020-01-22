@@ -55,7 +55,15 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
+        
+        {% if site.category_archive.type and page.categories[0] %}
+          {% include category-list.html %}
+        {% endif %}
+
+        {% if site.tag_archive.type and page.tags[0] %}
+          {% include tag-list.html %}
+        {% endif %}
+
         {% if page.last_modified_at %}
           <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></p>
         {% elsif page.date %}
@@ -64,8 +72,7 @@ layout: default
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
-
-      {% include post_pagination.html %}
+      <!-- {% include post_pagination.html %} -->
     </div>
 
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
@@ -81,9 +88,11 @@ layout: default
         {% capture related_posts %}{{ page.categories }}{% endcapture %}
         {% assign categories = page.categories[related_posts] %}
 
-        
         {% for post in site.posts %}
-          {% if post.id == page.id %} {% continue %} {% endif %}
+          {% if post.id==page.id %}
+            {% include archive-single.html active="true" %}
+            {% continue %}
+          {% endif %}
 
           {% for category in post.categories %}
             {% if page.categories contains category %}
