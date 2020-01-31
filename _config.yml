@@ -99,9 +99,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google-gtag # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-157415579-1
     anonymize_ip         : # true, false (default)
 
 
@@ -158,27 +158,22 @@ author:
       logo        : hics.png
       url         : https://www.hicscompany.com
       position    : Software Engineer & Architect
-      description : Worked on Digitial Holography Image Processing and Device Control S/W Development
+      description : Worked on 3D Inspection Software Development and Digitial Holography Image Processing
       visible     : true
 
   # project section data
   projects:
-    - title       : Gamers Hub
-      logo        : gamershub.png
-      url         : https://gamershub.in
-      description : A Platform built for Gamers and Game Devs
-      visible     : true
-    - title       : Programming Ebooks
-      logo        : programmingebooks.png
-      url         : https://programmingebooks.com
-      description : A Platform to easily find and read programming books
-      visible     : true
+    # - title       : Gamers Hub
+    #   logo        : gamershub.png
+    #   url         : https://gamershub.in
+    #   description : A Platform built for Gamers and Game Devs
+    #   visible     : true
 
   # skill section data
   skills: C/C++, MFC, Matlab, Java, Android, Python, Git, Linux
 
   # wakatime username (coding activity)
-  wakatime_username: sujaykundu777
+  wakatime_username: # sujaykundu777
 
 # Site Footer
 footer:
