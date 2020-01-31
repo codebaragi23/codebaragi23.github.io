@@ -3,7 +3,6 @@ title: 마크다운 문법
 categories:
   - GitHub Pages
 tags:
-  - GitHub Pages
   - Markdown
 toc: true
 

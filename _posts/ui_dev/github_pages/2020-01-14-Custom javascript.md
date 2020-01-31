@@ -3,8 +3,10 @@ title: minimal-mistakes 테마에서 javascript custom 하기
 categories:
   - GitHub Pages
 tags:
-  - GitHub Pages
-  - Markdown
+  - npm 설치
+  - javascript custom
+  - javascript 빌드
+  - min.js 빌드
 toc: true
 
 header:

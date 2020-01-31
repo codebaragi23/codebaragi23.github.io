@@ -33,7 +33,7 @@ body {
 .initial-content,
 .search-content {
   flex: 1 0 auto;
-  margin-top: 5em;
+  margin-top: 4.8em;
 }
 
 .page {
@@ -104,8 +104,8 @@ body {
 		&:hover .header-link {
 			opacity: 1;
 		}
-	}
-
+  }
+  
   p,
   li,
   dl {

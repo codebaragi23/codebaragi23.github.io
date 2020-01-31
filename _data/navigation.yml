@@ -14,37 +14,72 @@ main:
         url: /qt/
       - title: GitHub Pages
         url: /github_pages/
-  - title: "Contact"
-    url: /contact/
-  - title: "Categories"
-    url: /categories/
-  - title: "Posts"
-    url: /posts/
+
   - title: "Tags"
     url: /tags/
+  - title: "Books"
+    url: /books/
+  - title: "Contact"
+    url: /contact/
 
+  # - title: "Categories"
+  #   url: /categories/
+  # - title: "Posts"
+  #   url: /posts/
 
-# # sidebar navigation list sample
-# sidebar-sample:
-#   - title: "Parent Page A"
-#     children:
-#       - title: "Child Page A1"
-#         url: /child-page-a1/
-#       - title: "Child Page A2"
-#         url: /child-page-a2/
-#       - title: "Child Page A3"
-#         url: /child-page-a3/
-#       - title: "Child Page A4"
-#         url: /child-page-a4/
-#   - title: "Parent Page B"
-#     children:
-#       - title: "Child Page B1"
-#         url: /child-page-b1/
-#       - title: "Child Page B2"
-#         url: /child-page-b2/
-#       - title: "Child Page B3"
-#         url: /child-page-b3/
-#       - title: "Child Page B4"
-#         url: /child-page-b4/
-#       - title: "Child Page B5"
-#         url: /child-page-b5/
+# books links
+howto:
+  - title: Getting Started
+    children:
+      - title: "Quick-Start Guide"
+        url: /books/howto/quick-start-guide/
+      - title: "Structure"
+        url: /books/howto/structure/
+      - title: "Installation"
+        url: /books/howto/installation/
+      - title: "Upgrading"
+        url: /books/howto/upgrading/
+  - title: Customization
+    children:
+      - title: "Configuration"
+        url: /books/howto/configuration/
+      - title: "Overriding Theme Defaults"
+        url: /books/howto/overriding-theme-defaults/
+      - title: "Navigation"
+        url: /books/howto/navigation/
+      - title: "UI Text"
+        url: /books/howto/ui-text/
+      - title: "Authors"
+        url: /books/howto/authors/
+      - title: "Layouts"
+        url: /books/howto/layouts/
+  - title: Content
+    children:
+      - title: "Working with Posts"
+        url: /books/howto/posts/
+      - title: "Working with Pages"
+        url: /books/howto/pages/
+      - title: "Working with Collections"
+        url: /books/howto/collections/
+      - title: "Helpers"
+        url: /books/howto/helpers/
+      - title: "Utility Classes"
+        url: /books/howto/utility-classes/
+  - title: Extras
+    children:
+      - title: "Stylesheets"
+        url: /books/howto/stylesheets/
+      - title: "JavaScript"
+        url: /books/howto/javascript/
+  - title: Meta
+    children:
+      - title: "History"
+        url: /books/howto/history/
+      - title: "Contributing"
+        url: /books/howto/contributing/
+      - title: "Old 2.2 Docs"
+        url: /books/howto/docs-2-2/
+      - title: "License"
+        url: /books/howto/license/
+      - title: "Terms &amp; Privacy Policy"
+        url: /terms/

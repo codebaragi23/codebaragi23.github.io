@@ -6,6 +6,8 @@ tags:
   - MFC
   - USB Device
   - Device connect/disconnect
+  - WM_DEVICECHANGE
+  - RegisterDeviceNotification
 toc: true
 
 header:

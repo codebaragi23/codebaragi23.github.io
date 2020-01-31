@@ -9,7 +9,7 @@ header:
       url : /about/
 excerpt: >
   개인 블로그를 운영할까 합니다.<br />
-  개발 노하우 및 공부 자료 위주로 정리할까 하는데 개발자 분들게 참고가 되었으면 좋겠네요.<br />
+  개발 노하우 및 공부 자료 위주로 정리할까 하는데 개발자 분들께 참고가 되었으면 좋겠네요.<br />
 
 feature_row_env:
   - overlay_image: /assets/images/category/dev_env/git/background-teaser.png

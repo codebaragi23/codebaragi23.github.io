@@ -3,9 +3,9 @@ title: 윈도우에서 지킬 설치 및 블로그 생성하기
 categories:
   - GitHub Pages
 tags:
-  - GitHub
-  - GitHub Pages
-  - Jekyll 설치
+  - 루비 설치
+  - 지킬 설치
+  - 로컬 블로그 생성
 toc: true
 
 header:

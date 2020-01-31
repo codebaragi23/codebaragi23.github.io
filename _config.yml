@@ -135,7 +135,7 @@ author:
   # about section data
   about: 
     description : GitHub와 함께 GitHub Pages를 이용한 개발자 블로그를 운영해 보고자 합니다.
-                  메인으로 C/C++ 기반 요소 기술 개발을 주로 하였고 UI 개발을 겸하여 MFC, Qt의 경험이 있습니다.
+                  메인으로 C/C++ 기반 요소 기술 개발 및 메인 프로젝트를 주로 하였고 DB 및 UI 개발을 겸하여 MFC, Qt를 다룹니다.
 
   # educations section data
   educations:
@@ -153,6 +153,12 @@ author:
       url         : https://www.lge.co.kr/
       position    : Software Engineer
       description : Worked on various Smartphone Camera Technology
+      visible     : true
+    - title       : HICS COMPANY
+      logo        : hics.png
+      url         : https://www.hicscompany.com
+      position    : Software Engineer & Architect
+      description : Worked on Digitial Holography Image Processing and Device Control S/W Development
       visible     : true
 
   # project section data
@@ -196,6 +202,55 @@ footer:
       icon: fab fa-fw fa-instagram
       # url:
 
+
+
+# Collections
+collections:
+  books:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      write_date: true
+      read_time: true
+      comments: # true # blog comment
+      share: true
+      related: "categories" # "categories", "tags"
+      
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      write_date: false
+      read_time: false
+      comments: false
+      share: true
+      related:
+
+  # _books
+  - scope:
+      path: "_books/howto"
+      type: books
+    values:
+      layout: single
+      author_profile: false
+      write_date: false
+      read_time: false
+      comments: false
+      share: false
+      sidebar:
+        nav: "howto"
 
 # Reading Files
 include:
@@ -252,7 +307,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 
 # Sass/SCSS
 sass:
@@ -319,31 +373,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      write_date: true
-      read_time: true
-      comments: # true # blog comment
-      share: true
-      related: "categories" # "categories", "tags"
-      
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      write_date: false
-      read_time: false
-      comments: false
-      share: true
-      related:

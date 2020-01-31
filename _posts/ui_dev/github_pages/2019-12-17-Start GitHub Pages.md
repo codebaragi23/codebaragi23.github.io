@@ -3,8 +3,8 @@ title: GitHub Pages 시작
 categories: 
   - GitHub Pages
 tags: 
-  - GitHub
-  - GitHub Pages
+  - GitHub Pages란
+  - GitHub Pages 생성
 toc: true
 
 header:
