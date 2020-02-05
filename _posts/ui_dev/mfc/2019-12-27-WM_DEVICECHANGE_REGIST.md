@@ -11,8 +11,8 @@ tags:
 toc: true
 
 header:
-  teaser: https://images.unsplash.com/photo-1494049694820-92a3163b10ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1322&q=80
-  overlay_image: https://images.unsplash.com/photo-1494049694820-92a3163b10ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1322&q=80
+  teaser: https://images.unsplash.com/photo-1494049694820-92a3163b10ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=4
+  overlay_image: https://images.unsplash.com/photo-1494049694820-92a3163b10ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
   overlay_filter: 0.5
   caption: "Photo by Michael Henry on Unsplash"
 

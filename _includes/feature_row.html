@@ -4,6 +4,10 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
+{% if page.custom_stylesheet %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.custom_stylesheet }}.css">
+{% endif %}
+
 <div class="feature__wrapper">
   {% for feature in feature_row %}
 
@@ -16,11 +20,10 @@
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">
         {% if feature.overlay_color or feature.overlay_image %}
-
           {% if feature.overlay_image contains "://" %}
-            {% capture overlay_img_path %}{{ feature.overlay_image }}{% endcapture %}
+            {% capture img_path %}{{ feature.overlay_image }}{% endcapture %}
           {% elsif feature.overlay_image %}
-            {% capture overlay_img_path %}{{ feature.overlay_image | relative_url }}{% endcapture %}
+            {% capture img_path %}{{ feature.overlay_image | relative_url }}{% endcapture %}
           {% endif %}
 
           {% if feature.overlay_filter contains "rgba" %}
@@ -30,20 +33,22 @@
           {% endif %}
 
           <div class="archive__item-teaser{% if feature.overlay_color or feature.overlay_image %}--overlay{% endif %}"
-            style="{% if feature.overlay_color %}background-color: {{ feature.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}">
+            style="{% if feature.overlay_color %}background-color: {{ feature.overlay_color | default: 'transparent' }};{% endif %} {% if img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ img_path }}');{% endif %}">
             <h1 class="archive__item-title" itemprop="headline">{{ feature.title }}</h1>
           </div>
 
-        {% else if feature.image_path %}
-
-          {% if feature.image_path contains "://" %}
-            {% capture img_path %}{{ feature.image_path }}{% endcapture %}
+        {% else %}
+          {% if feature.bg_image contains "://" %}
+            {% capture img_path %}{{ feature.bg_image }}{% endcapture %}
           {% else %}
-            {% capture img_path %}{{ feature.image_path | relative_url }}{% endcapture %}
+            {% capture img_path %}{{ feature.bg_image | relative_url }}{% endcapture %}
           {% endif %}
 
-          <div class="archive__item-teaser">
+          <div class="archive__item-teaser"
+          style="{% if feature.bg_color %}background-color: {{ feature.bg_color | default: 'transparent' }};{% endif %}">
+            {% if feature.bg_image %}
             <img src= "{{ img_path }}" alt="{% if feature.alt %}{{ feature.alt }}{% endif %}">
+            {% endif %}
             {% if feature.caption %}
             <span class="archive__item-caption">{{ feature.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
             {% endif %}
@@ -62,13 +67,16 @@
               {{ feature.excerpt | markdownify }}
             </div>
           {% endif %}
+        </div>
 
+        <div class="archive__item-footer">
           <div class="text-right">
-          {% if feature.url %}
-            <p><a href="{{ feature_url }}" class="btn {{ feature.btn_class }}">{{ feature.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
-          {% endif %}
+            {% if feature.url %}
+              <p><a href="{{ feature_url }}" class="btn {{ feature.btn_class }}">{{ feature.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+            {% endif %}
           </div>
         </div>
+
       </div>
     </div>
   {% endfor %}

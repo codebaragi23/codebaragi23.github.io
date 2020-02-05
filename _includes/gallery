@@ -28,19 +28,19 @@
         {% if img.title %}title="{{ img.title }}"{% endif %}
       >
         <img src=
-          {% if img.image_path contains "://" %}
-            "{{ img.image_path }}"
+          {% if img.bg_image contains "://" %}
+            "{{ img.bg_image }}"
           {% else %}
-            "{{ img.image_path | relative_url }}"
+            "{{ img.bg_image | relative_url }}"
           {% endif %}
           alt="{% if img.alt %}{{ img.alt }}{% endif %}">
       </a>
     {% else %}
       <img src=
-        {% if img.image_path contains "://" %}
-          "{{ img.image_path }}"
+        {% if img.bg_image contains "://" %}
+          "{{ img.bg_image }}"
         {% else %}
-          "{{ img.image_path | relative_url }}"
+          "{{ img.bg_image | relative_url }}"
         {% endif %}
         alt="{% if img.alt %}{{ img.alt }}{% endif %}">
     {% endif %}

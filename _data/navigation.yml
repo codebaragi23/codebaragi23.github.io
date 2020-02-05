@@ -15,10 +15,12 @@ main:
       - title: GitHub Pages
         url: /github_pages/
 
-  - title: "Tags"
-    url: /tags/
+  - title: "Apps"
+    url: /apps/
   - title: "Books"
     url: /books/
+  - title: "Tags"
+    url: /tags/
   - title: "Contact"
     url: /contact/
 
