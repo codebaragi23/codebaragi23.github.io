@@ -51,6 +51,11 @@
     margin-top: 0.5em;
   }
 
+  .card__item-chart {
+    img {
+      max-width: 100%;
+    } 
+  }
   .card__item-logo {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;

@@ -85,21 +85,23 @@ layout: default
     <div class="col-lg-6">
       {% if site.author.skills %}
         <div class="card">
-          <h1> Skills </h1>
+          <h1 class="card-title"> Skills </h1 class="card-title">
           <p class=skills>{{site.author.skills}}</p>
         </div>
       {% endif %}
   
       {% if site.author.contributions_id %}
       <div class="card">
-        <h1> Contributions </h1>
-        <img src="http://ghchart.rshah.org/codebaragi23" />
+        <h1 class="card-title"> Contributions </h1 class="card-title">
+        <div class="card__item-chart">
+          <img src="http://ghchart.rshah.org/codebaragi23" />
+        </div>
       </div>
     {% endif %}
 
       {% if site.author.wakatime_username %}
         <div class="card">
-          <h1> Coding Activity </h1>
+          <h1 class="card-title"> Coding Activity </h1 class="card-title">
           <!-- Pie Chart -->
           <figure>
             <embed src="https://wakatime.com/share/@{{site.author.wakatime_username}}/f540df00-f2d1-46e2-a360-da7e13ed8a66.svg"></embed>

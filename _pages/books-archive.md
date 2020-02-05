@@ -9,8 +9,8 @@ entries_layout: grid
 
 header:
   overlay_image: https://images.unsplash.com/photo-1573166364902-982ae58a27ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
-  caption: Photo by Christina @ wocintechchat.com on Unsplash
   overlay_filter: 0.5
+  caption: Photo by Christina @ wocintechchat.com on Unsplash
 excerpt: 책 스터디를 하며 내용 정리 및 예제를 정리하고자 합니다.
 
 feature_row_howto:
