@@ -1,6 +1,6 @@
 ---
 title: Books
-layout: category
+layout: splash
 permalink: /books/
 taxonomy: books
 

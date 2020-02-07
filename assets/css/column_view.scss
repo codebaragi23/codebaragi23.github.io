@@ -16,4 +16,19 @@
   .archive__item-body {
     margin-bottom: 60%;
   }
+
+  .archive__item-footer {
+    margin-top: 0.5em;
+    padding: 0;
+    border-top: 0;
+    background-color: #f2f3f3;
+
+    p {
+      margin: 0;
+    }
+
+    a.btn {
+      margin: 1em;
+    }
+  }
 }

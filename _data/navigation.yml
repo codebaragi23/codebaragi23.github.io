@@ -8,6 +8,8 @@ main:
     children:
       - title: Git
         url: /git/
+      - title: Python
+        url: /python/
       - title: MFC
         url: /mfc/
       - title: Qt
@@ -15,8 +17,8 @@ main:
       - title: GitHub Pages
         url: /github_pages/
 
-  - title: "Apps"
-    url: /apps/
+  - title: "Devs"
+    url: /devs/
   - title: "Books"
     url: /books/
   - title: "Tags"

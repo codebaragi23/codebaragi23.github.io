@@ -337,6 +337,10 @@
     p {
       margin: gutter(1 of 12) 0;
     }
+
+    a.btn {
+      margin-bottom: 0;
+    }
   }
 
   a.btn::before {

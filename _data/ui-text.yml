@@ -49,6 +49,7 @@ en: &DEFAULT_EN
   search_placeholder_text    : "Enter your search term..."
   results_found              : "Result(s) found"
   back_to_top                : "Back to top"
+  license                    : "License"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -626,6 +627,7 @@ ko: &DEFAULT_KO
   search_placeholder_text    : "검색어를 입력하세요..."
   results_found              : "결과 발견"
   back_to_top                : "맨 위로 이동"
+  license                    : "이용약관"
 ko-KR:
   <<: *DEFAULT_KO
 

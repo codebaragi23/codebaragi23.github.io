@@ -3,7 +3,10 @@ title: Developer Jinn
 layout: splash
 permalink: /
 header:
-  overlay_color: "#5e616c"
+  overlay_image: https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
+  overlay_filter: 0.5
+  caption: "Photo by Arian Darvishi on Unsplash"
+
   actions:
     - label: About me
       url : /about/
@@ -18,6 +21,15 @@ feature_row_env:
     alt: Git
     excerpt: 버전 관리를 위한 git을 사용하면서 정리해 보고자 합니다.
     url: /git/
+    btn_class: btn--primary
+
+feature_row_lang:
+  - overlay_image: /assets/images/category/language/python/background-teaser.png
+    overlay_filter: 0.5
+    title: "Python"
+    alt: Python
+    excerpt: Python 언어에 대한 tip을 정리하고자 합니다.
+    url: /python/
     btn_class: btn--primary
 
 feature_row_ui:
@@ -50,6 +62,9 @@ feature_row_serv:
 
 # Dev. Environment
 {% include feature_row.html id="feature_row_env" %}
+
+# Dev. Language
+{% include feature_row.html id="feature_row_lang" %}
 
 # UI Development
 {% include feature_row.html id="feature_row_ui" %}
