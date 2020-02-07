@@ -24,7 +24,7 @@ feature_row_env:
     btn_class: btn--primary
 
 feature_row_lang:
-  - overlay_image: /assets/images/category/language/python/background-teaser.png
+  - overlay_image: /assets/images/category/dev_lang/python/background-teaser.png
     overlay_filter: 0.5
     title: "Python"
     alt: Python

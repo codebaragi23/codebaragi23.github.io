@@ -3,9 +3,11 @@ title: "Git 기본 사용법-원격 저장소편"
 categories: 
   - Git
 tags: 
+  - Git 명령어
+  - Git 원격 명령어
   - Git 사용법
-  - Git 기본
 toc: true
+last_modified_at: 2020-02-07
 
 header:
   teaser: https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
@@ -66,6 +68,17 @@ $ git push origin master
 ```bash
 $ git push origin HEAD
 ```
+
+**_-u_ 옵션 사용**
+
+먼저 가장 많이 쓰이는 예를 보겠다.
+
+```bash
+$ git push -u origin master
+```
+
+이 명령어에서 -u 옵션은 master라는 현재 브랜치를 origin 원격저장소의 master 브랜치로 연결해 주어 다음부터는 간단히 git push만 입력하면 동일한 동작을 해 준다.
+
 
 ### 원격 저장소 변경
 

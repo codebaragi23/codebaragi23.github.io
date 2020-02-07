@@ -3,9 +3,11 @@ title: "Git 기본 사용법-로컬 저장소편"
 categories: 
   - Git
 tags: 
+  - Git 명령어
+  - Git 로컬 명령어
   - Git 사용법
-  - Git 기본
 toc: true
+last_modified_at: 2020-02-07
 
 header:
   teaser: https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
