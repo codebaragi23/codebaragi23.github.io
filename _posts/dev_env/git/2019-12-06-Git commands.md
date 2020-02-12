@@ -6,7 +6,7 @@ tags:
   - Git 구조
   - Git 명령어
 toc: true
-last_modified_at: 2020-02-07
+last_modified_at: 2020-02-11
 
 related_posts:
   - 2019-12-05-Start Git
@@ -19,6 +19,8 @@ header:
 
 icon: fa-github
 ---
+
+Git의 구조 및 기본 명령어들을 살펴보고자 합니다.
 
 ## 1. 구조
 

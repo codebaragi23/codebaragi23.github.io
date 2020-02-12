@@ -7,7 +7,7 @@ tags:
   - Git 로컬 명령어
   - Git 사용법
 toc: true
-last_modified_at: 2020-02-07
+last_modified_at: 2020-02-11
 
 header:
   teaser: https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
@@ -92,15 +92,3 @@ $ git commit -m 'update git'
 $ git status
 ```
 
-## .gitignore 사용하기
-
-특정 파일 혹은 디렉토리를 git 관리 대상에서 제외할 때 사용하는 파일입니다.
-예를 들면 로그파일, 프로젝트 파일, 빌드 파일 등을 사용할 수 있겠죠.
-
-Github에서 제시한 gitignore 예시 링크입니다.
-
-<https://github.com/github/gitignore>
-
-언어별 예시로 gitignore를 만들어 주는 사이트도 아래와 같이 있습니다.
-
-<https://www.gitignore.io/>

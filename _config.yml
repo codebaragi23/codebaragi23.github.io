@@ -237,7 +237,7 @@ defaults:
 
   # _books
   - scope:
-      path: "_books/howto"
+      path: "_books/DeepLearningFromScratch"
       type: books
     values:
       layout: single
@@ -247,7 +247,7 @@ defaults:
       comments: true
       share: false
       sidebar:
-        nav: "howto"
+        nav: "DeepLearningFromScratch"
 
 # Reading Files
 include:

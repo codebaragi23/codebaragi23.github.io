@@ -31,6 +31,19 @@ main:
   # - title: "Posts"
   #   url: /posts/
 
+DeepLearningFromScratch:
+  - title: 책 소개
+    url: /books/DeepLearningFromScratch/summary/
+  - title: Chapter 1. 헬로 파이썬
+    url: /books/DeepLearningFromScratch/1. Hello Python/
+    children:
+      - title: 1.1 파이썬이란?
+        url: /books/DeepLearningFromScratch/1.1 What's python/
+      - title: 1.2 파이썬 설치하기
+        url: /books/DeepLearningFromScratch/1.2 Installing python/
+      - title: 1.3 파이썬 인터프리터
+        url: /books/DeepLearningFromScratch/1.3 Python interpreter/
+
 # books links
 howto:
   - title: Getting Started

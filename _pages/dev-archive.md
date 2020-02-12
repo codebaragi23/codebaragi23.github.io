@@ -6,7 +6,7 @@ taxonomy: devs
 
 entries_layout: grid
 classes: wide
-custom_stylesheet: column_view
+custom_stylesheet: app_view
 
 header:
   overlay_image: https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
