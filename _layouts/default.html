@@ -10,33 +10,86 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+  {% include head.html %}
+  {% include head/custom.html %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include_cached skip-links.html %}
-    {% include_cached browser-upgrade.html %}
-    {% include_cached masthead.html %}
+  {% include_cached skip-links.html %}
+  {% include_cached browser-upgrade.html %}
+  {% include_cached masthead.html %}
 
-    <div class="initial-content">
-      {{ content }}
+  <div class="initial-content">
+    {{ content }}
+  </div>
+
+  {% if site.search == true %}
+    <div class="search-content">
+    {% include_cached search/search_form.html %}
     </div>
+  {% endif %}
 
-    {% if site.search == true %}
-      <div class="search-content">
-        {% include_cached search/search_form.html %}
-      </div>
-    {% endif %}
+  <div id="footer" class="page__footer">
+    <footer>
+    {% include footer/custom.html %}
+    {% include_cached footer.html %}
+    </footer>
+  </div>
 
-    <div id="footer" class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include_cached footer.html %}
-      </footer>
-    </div>
+  {% include scripts.html %}
 
-    {% include scripts.html %}
+  <script>
+    function escapeHTML(s) {
+			return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+				.replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+				.replace(/'/g,'&#39;');
+		}
 
+    (function($) {
+      $("body").bind('copy', function (e) {
+        var url = document.location.href;
+        var decodedUrl = decodeURI(url);
+        var selection = window.getSelection();
+        
+        if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+          event.preventDefault();
+  
+          var pagelink = '\n\n 출처: ' + decodedUrl,
+            copytext = selection + pagelink;
+  
+          if (window.clipboardData) {
+            window.clipboardData.setData('Text', copytext);
+          }
+          return;
+        }
+
+        var body_element = document.getElementsByTagName('body')[0];
+  
+        //if the selection is short let's not annoy our users
+        if (("" + selection).length < 30) return;
+  
+        //create a div outside of the visible area
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        body_element.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+  
+        //we need a <pre> tag workaround
+        //otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+          newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+  
+        newdiv.innerHTML += '<br /><br />출처: <a href="' + url + '">' + escapeHTML(decodedUrl) + '</a> [' + $('meta[property="og:site_name"]').attr('content') + ']';
+  
+        selection.selectAllChildren(newdiv);
+  
+        window.setTimeout(function () {
+          body_element.removeChild(newdiv);
+        }, 200);
+      });
+    })(jQuery);
+  </script>
   </body>
 </html>
