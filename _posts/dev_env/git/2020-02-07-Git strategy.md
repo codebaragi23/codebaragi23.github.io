@@ -1,5 +1,5 @@
 ---
-title: "Git 전략 편"
+title: Git 전략 편
 categories: 
   - Git
 tags: 
@@ -11,7 +11,7 @@ header:
   teaser: https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
   overlay_image: https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo by Campaign Creators on Unsplash"
+  caption: Photo by Campaign Creators on Unsplash
 
 icon: fa-github
 ---

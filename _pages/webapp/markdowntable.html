@@ -1,0 +1,81 @@
+---
+title: MarkdownTable
+layout: default
+permalink: /webapp/markdowntable/
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+{% include webapp/markdowntable-scripts.html %}
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
+
+    <section class="page__content" itemprop="text">
+      <div class="container-fluid" style="padding-top: 2em;">
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">HTML table to Markdown Converter</h1>
+        <div class="text-right"><button class="btn btn-success" onclick="convertHtmlTableToMarkdown()">Convert</button></div>
+      </header>
+
+        <div class="row" style="padding-top: 10px;">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="html__layout">
+              <label for="html__text"><strong>HTML code:</strong></label>
+              <textarea id="html__text" rows="20" style="width: 100%; height: 600px; font-size: medium;">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+    &lt;th&gt;Spending&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+      &lt;td&gt;January&lt;/td&gt;
+      &lt;td&gt;$100&lt;/td&gt;
+    &lt;td&gt;$900&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+      &lt;td&gt;July&lt;/td&gt;
+      &lt;td&gt;$750&lt;/td&gt;
+    &lt;td&gt;$1000&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+      &lt;td&gt;December&lt;/td&gt;
+      &lt;td&gt;$250&lt;/td&gt;
+    &lt;td&gt;$300&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+      &lt;td&gt;April&lt;/td&gt;
+      &lt;td&gt;$400&lt;/td&gt;
+    &lt;td&gt;$700&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+              </textarea>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="markdown__layout">
+              <label for="markdown__text"><strong>Markdown code:</strong></label>
+              <textarea id="markdown__text" rows="20" style="width: 100%; height: 600px; font-size: medium;" readonly="readonly">
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>

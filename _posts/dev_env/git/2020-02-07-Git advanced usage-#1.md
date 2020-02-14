@@ -1,5 +1,5 @@
 ---
-title: "Git 고급편-1편"
+title: Git 고급편-1편
 categories: 
   - Git
 tags: 
@@ -13,10 +13,12 @@ header:
   teaser: https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
   overlay_image: https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "Photo by Sam Dan Truong on Unsplash"
+  caption: Photo by Sam Dan Truong on Unsplash
 
 icon: fa-github
 ---
+
+Git을 사용하기 위한 고급 사용방법에 대해 정리해 보고자 합니다.
 
 ## .gitignore 사용하기
 

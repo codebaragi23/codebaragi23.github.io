@@ -1,8 +1,8 @@
 ---
-title: Development
+title: Applications
 layout: splash
-permalink: /devs/
-taxonomy: devs
+permalink: /apps/
+taxonomy: apps
 
 entries_layout: grid
 classes: wide
@@ -11,7 +11,7 @@ custom_stylesheet: app_view
 header:
   overlay_image: https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
   overlay_filter: 0.5
-  caption: "Photo by Carl Heyerdahl on Unsplash"
+  caption: Photo by Carl Heyerdahl on Unsplash
   actions:
     - label: License
       url : /license/
@@ -45,7 +45,19 @@ feature_row_win:
     btn_class: btn--primary
 
 feature_row_web:
-  # - bg_image: /assets/images/apps/LunarCalendarGenerator.png
+  - bg_color: "#ea4c89"
+    bg_image: /assets/images/apps/MarkdownTableConverter.png
+    layered_dir: right
+
+    title: MarkdownTableConverter
+    excerpt: >
+      기능 1. Html table을 Markdown table로 변환
+    url: /webapp/markdowntable/
+    btn_label: 이동
+    btn_class: btn--primary
+    
+  # - bg_color: "#ea4c89"
+  #   bg_image: /assets/images/apps/LunarCalendarGenerator.png
   #   layered_dir: right
 
   #   title: 양력↔음력 변환
@@ -57,7 +69,7 @@ feature_row_web:
   #   btn_class: btn--primary
 ---
 
-# Window/MacOS App
+# Window/MacOS
 {% include feature_row.html id="feature_row_win" %}
 
 # Web

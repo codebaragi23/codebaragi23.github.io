@@ -83,25 +83,28 @@ body:hover .visually-hidden button {
    Type
    ========================================================================== */
 
-.text-left {
+.text {
+  &-left {
   text-align: left;
+  }
+  
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+
+  &-nowrap {
+    white-space: nowrap;
+  }
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.text-nowrap {
-  white-space: nowrap;
-}
 
 /*
    Task lists

@@ -43,7 +43,7 @@
         {% endif %}
       </h1>
       {% if page.header.show_overlay_excerpt != false and page.excerpt %}
-        <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        <p class="page__lead">{{ page.excerpt | markdownify | strip_html | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
       <p class="page__meta">
         {% if page.write_date and page.date %}

@@ -10,7 +10,7 @@ header:
   teaser: https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=40
   overlay_image: https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80
   overlay_filter: 0.5
-  caption: "Photo by Mika Baumeister on Unsplash"
+  caption: Photo by Mika Baumeister on Unsplash
 
 icon: fa-github
 ---

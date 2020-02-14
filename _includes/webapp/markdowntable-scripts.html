@@ -1,0 +1,55 @@
+<script>
+  function convertHtmlTableToMarkdown() {
+    var src = document.getElementById('html__text');
+    var dst = document.getElementById('markdown__text');
+    var contents = $(src.value).toArray();
+
+    //if there is a table we append
+    var tables = contents.filter(tag => {return tag.tagName == 'TABLE';});
+    var markdown = [];
+
+    for (var table of tables) {
+      markdown.push(convertTableElementToMarkdown(table) + '\n');
+    }
+
+    if(markdown.length) {
+      dst.textContent = markdown.join("");
+    }
+    else {
+      dst.textContent ='ERROR: No table found';
+    }
+  }
+
+  function convertTableElementToMarkdown(table) {
+    var markdown = [];
+    var trs = table.getElementsByTagName('tr');
+    
+    // loop all the rows
+    for (var e=0; e<trs.length; e++) {
+      markdown.push(convertHtmlTrToMarkdown(trs[e]));
+      
+      if (e == 0) {
+        markdown.push(createMarkdownHeaderFooter(trs[e].children.length))
+      }
+    }
+    return markdown.join('\n');
+  }
+
+  //Add row if it has data
+  function convertHtmlTrToMarkdown(tr) {
+    var markdown = ['|'];
+    for (var cell of tr.children) {
+      markdown.push(cell.innerText + '|');
+    }
+    return markdown.join("");
+  }
+
+  //Append header at the beggining
+  function createMarkdownHeaderFooter(cellCount) {
+    var dividerCells = ['|'];
+    for (var e=0; e<cellCount; e++) {
+      dividerCells.push('---' + '|');
+    }
+    return dividerCells.join("");
+  }
+</script>
