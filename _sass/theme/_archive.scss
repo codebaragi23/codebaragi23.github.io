@@ -315,9 +315,15 @@
   .archive__item-body {
     height: 0;
     margin-top: 0.5em;
-    margin-bottom: 30%;
     padding-left: gutter(1 of 12);
     padding-right: gutter(1 of 12);
+    padding-bottom: 30%;
+
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: vertical;
   }
 
   .archive__item-footer {

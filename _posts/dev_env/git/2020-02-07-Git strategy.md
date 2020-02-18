@@ -20,10 +20,7 @@ icon: fa-github
 
 원글은 아래의 출처에 있고 제 스스로 git을 잘 사용해 보고자 간단히 정리해 보았습니다.
 
-**[출처]**  [Git, 가장 쉽게 사용하기 - (2) commit, branch 전략 잘 짜는 법](http://blog.naver.com/tmondev/220763012361)
-
-**작성자**  [개발몬스터](http://blog.naver.com/tmondev)
-
+출처: [티몬의 개발이야기-Git, 가장 쉽게 사용하기 - (2) commit, branch 전략 잘 짜는 법](http://blog.naver.com/tmondev/220763012361)
 ---
 
 ## Commit 전략

@@ -494,12 +494,23 @@ body:hover .visually-hidden button {
 
 .footnotes {
   color: mix(#fff, $gray, 25%);
+  border-top: 1px solid $border-color;
+  margin-top: 0.5em;
 
   ol,
   li,
   p {
     margin-bottom: 0;
     font-size: $type-size-6;
+  }
+
+  ol {
+    li {
+      font-size: 0.85em;
+      p {
+        font-size: 1em;
+      }
+    }
   }
 }
 
@@ -539,9 +550,9 @@ a.reversefootnote {
 
 .responsive-video-container {
   position: relative;
+  height: 0;
   margin-bottom: 1em;
   padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
   max-width: 100%;
 

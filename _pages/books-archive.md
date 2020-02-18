@@ -24,7 +24,7 @@ howto:
     url: /books/howto/quick-start-guide/
     btn_class: btn--primary
 
-DeepLearningFromScratch:
+DeepLearning:
   - overlay_image: http://www.hanbit.co.kr/data/books/B8475831198_l.jpg
     overlay_filter: 0.3
     title: Deep Learning From Scratch
@@ -32,10 +32,18 @@ DeepLearningFromScratch:
     excerpt: 밑바닥부터 시작하는 딥러닝
     url: /books/DeepLearningFromScratch/summary/
     btn_class: btn--primary
+
+  - overlay_image: http://image.yes24.com/goods/65050162/800x0
+    overlay_filter: 0.3
+    title: Deep Learning Width Python
+    alt: Deep Learning Width Python
+    excerpt: 케라스 창시자에게 배우는 딥러닝
+    url: /books/DeepLearningWithPython/summary/
+    btn_class: btn--primary
 ---
 
 <!-- # 설명서
 {% include feature_row.html id="feature_row_howto" %} -->
 
 # 딥러닝
-{% include feature_row.html id="DeepLearningFromScratch" %}
+{% include feature_row.html id="DeepLearning" %}

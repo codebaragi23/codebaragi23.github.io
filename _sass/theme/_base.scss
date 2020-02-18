@@ -31,6 +31,7 @@ h6 {
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
+  word-break: break-all;
 }
 
 h1 {
@@ -61,11 +62,13 @@ h6 {
 small,
 .small {
   font-size: $type-size-6;
+  word-break: keep-all;
 }
 
 p {
   margin-bottom: 1.3em;
   font-size: $type-size-6;
+  word-break: keep-all;
 }
 
 u,
@@ -74,6 +77,15 @@ ins {
   border-bottom: 1px solid $text-color;
   a {
     color: inherit;
+  }
+}
+
+ol {
+  li {
+    font-size: 1em;
+    p {
+      font-size: 1em;
+    }
   }
 }
 

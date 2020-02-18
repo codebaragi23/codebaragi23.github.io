@@ -27,7 +27,8 @@ icon: fa-github
 > - MS-DOS, 윈도우에서 쓰이는 셸 스크립트로 명령 인터프리터에 의해 실행되게끔 고안된 명령어들을 작성한 텍스트 파일
 > - cmd.exe와 같은 셸 프로그램이 파일을 읽어 명령어를 줄 단위로 실행
 > - 배치 작업(실행 파일을 자동/연속적 실행)에 유용하게 사용
-> [출처-위키피디아](https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%B9%98_%ED%8C%8C%EC%9D%BC)
+>
+> 출처: [위키피디아](https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%B9%98_%ED%8C%8C%EC%9D%BC)
 
 배치파일은 별도의 컴파일이 필요하지 않아 메모장만 있으면 간단히 작성 및 실행 가능하기 때문에 간단하게 프로그래밍하여 유용하게 사용됩니다.
 
@@ -35,37 +36,339 @@ icon: fa-github
 
 ## 배치파일 기초
 
-[출처-잘해보자구!](https://devlsh.tistory.com/entry/Batch-file-or-Shell-Script-명령어-모음)
+### 환경 변수
 
-**ECHO :** 배치파일의 내용은 한 줄씩 실행이된다.
+윈도우의 시스템 속성>고급>환경 변수에는 설정된 변수들이 존재합니다. 이 환경변수들은 커맨드 창에서 `set` 명령어를 통해서도 확인 가능하며 cmd.exe와 같은 커맨드 창을 열면 바로 이 환경 변수를 넘겨받아 사용할 수 있습니다.
 
-또한 배치파일이 실행이 될 때, 무조건 echo가 on 상태에서 배치파일의 처음 부분이 실행이 된다.
+이 환경 변수들은 배치 파일 또는 커맨드 창에서 임시 변경 가능하며, 여기서 임시 변경이라는 말처럼 이 변경된 환경변수가 적용되는 구간은 작업 공간 즉, 현재 커맨드 창 뿐입니다.
 
-echo on 상태 : 한 줄이 실행될 때 마다, 그 줄의 내용을 화면에 뿌려준다.
+또한 배치 파일 내에서도 부분적으로 환경 변수를 변경할 때는 아래와 같이 사용 가능합니다.
 
-echo off 상태 : 줄이 실행될 때, 그 줄의 내용을 화면에 뿌리지 않는다.
+```batch
+SETLOCAL
+  rem something
+ENDLOCAL
+```
 
-단, 줄의 실행된 내용이 출력이 있는 경우에는 당연히 출력을 화면에 뿌려준다.
+### 작업 경로
 
-**echo on :** 이 라인 다음의 라인부터 echo-on 상태가 된다.
+배치파일을 작성하여 다른 경로의 프로그램을 실행할 경우 정상적으로 실행 되지 않을 수 있습니다. 이는 작업 경로와 실행 경로가 달라 다른 프로그램에 필요한 `dll`등의 기타 추가 파일이 참조되지 않기 때문입니다. 이 때에는 작업경로를 실행 프로그램의 경로로 변경 후 실행하면 정상 동작할 것입니다.
 
-**echo off :** 이 라인 다음의 라인부터 echo-off 상태가 된다.
+예를 들어 절대경로 `C:\Program Files\Test\Test.exe`를 실행하고자 할 경우 배치파일로 실행되지 않지만 `C:\Program Files\Test` 경로를 직접 접근해 `Test.exe`가 실행이 된다면 이는 작업 경로 지정이 되지 않은 이유 때문일 것입니다.
 
-**echo 문장** : 문장을 화면에 출력한다.
+이 때 아래와 같이 CD 명령어를 통해 해당 작업 경로로의 이동을 통해 실행한다면 정상 동작할 것입니다.
 
-**echo.** : empty line을 출력한다.
+```batch
+CD C:\Program Files\Test
+Test.exe
+```
 
-**echo %undefined1%** : 만일 undefined1이라는 변수가 정의되어 있지 않은 상태라면,
+디렉토리 경로의 변경에는 `CD`, `PUSHD`, `POPD` 등의 명령어를 사용할 수 있습니다.
+또한 작업 경로의 지역적인 변경에 위에서 언급한 `SETLOCAL`를 사용할 수도 있으며 이전 경로를 저장하고 변경 후 다시 덮어쓰는 다양한 방식으로 응용될 수 있습니다.
 
-화면에 ECHO가 정의되어 있지 않습니다. 라는 메시지가 출력이 된다.
+**CD**  
+디렉토리 경로 변경
+_/d_: 경로와 함께 드라이브까지 변경
 
-**@ :** 이것이 붙어 있는 라인은, echo-off 상태에서 그 라인이 실행이 된다.
+**PUSHD / POPD**  
+디렉토리 경로를 스택에 넣거나(PUSH) 빼는(POP) 명령어  
+PUSHD 뒤에 경로를 넣으면 현재 경로 보관 후 새로운 경로로 이동  
+POPD를 하면 이전 PUSHD 했던 곳으로 복귀
 
-즉 그 줄의 내용 자체는 화면에 표시가 안되고, 실행된 출력만이 화면에 표시가 된다.
 
-**:LABEL :** 라벨을 표시한다. GOTO와 함께 사용이 되어, 특정 래이블로 제어를 점프하기 위해 사용한다.
+### UTF-8 배치파일 한글 깨짐
 
-**%숫자 :** 도스창의 프롬프트에서 배치파일을 실행시킬 때의 인자들을, 배치파일내에서 사용하기 위함이다.
+배치파일에서 한글로 된 문장을 출력하려할 때 UTF-8 포맷으로된 배치파일을 사용할 때 커맨드 창에서는 한글 깨짐 현상이 발생합니다. 이를 해결하기 위해서는 아래의 방법들 중 상황에 맞게 사용하시면 됩니다.
+
+**1. 인코딩 타입을 ANSI로 변경**
+
+메모장 > 다른 이름으로 저장 > 인코딩에서 ANSI로 변경 > 저장
+
+**2. 커맨드 창을 UTF-8 인코딩 모드로 변경**
+
+커맨드 창에 `CHCP 65001` 입력(기본 설정은 CHCP가 437, 미국(영어로)로 설정 되어 있음)
+
+**3. 실행 배치파일로 UTF-8 인코딩 모드 변경**
+
+위와 같은 원리로 배치파일 내에서 변경하는 방법입니다.
+
+예>
+
+```batch
+CHCP 65001
+::또는
+@CHCP 65001
+```
+
+**4. 항상 커맨드 창을 UTF-8 모드로 열도록 레지스트리 변경**
+
+실행(`Win+R`)에서 레지스트리 편집기(`regedit`) 실행
+
+아래 경로로 이동  
+`컴퓨터\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage`
+
+OEMCP를 편집하여 949에서 65001로 변경
+
+## 명령어
+
+- 일반적인 도스명령들을 그대로 사용 가능합니다.  
+`TITLE`, `CLS`, `DIR`, `COPY`, `DEL`, `DATE`, `TIME`, `PROMPT`, `CHKDSK` 등
+- 배치 전용 명령어가 있습니다.  
+`ECHO`, `REM`, `GOTO`, `LABEL`, `IF`, `FOR`, `PAUSE`, `CALL`, `SHIFT`, `CHOICE` 등
+
+커맨드 창에서 명령어의 도움말을 보기 위해서는 `help \<command>`를 사용하시면 됩니다.
+
+#### TITLE
+
+형식은 다음과 같으며 명령 다음에 오는 문자열을 창의 제목으로 지정합니다.
+
+```batch
+TITLE 배치파일 실행 창
+```
+
+#### CLS
+
+`CL`ear `S`creen의 약자로 화면을 깨끗하게 비워줍니다.
+
+### 배치 명령어
+
+기본적으로 배치파일에서 사용하는 문법에 대/소문자 구분은 없습니다. 다만 저는 명령 라인 가독성을 높이기 위해 문법은 대문자로 처리하고 변수 및 문자열 등은 소문자 위주로 사용합니다.
+
+#### ECHO
+
+메시지를 표시하거나 명령 에코(명령라인을 보여주는 기능)를 켜거나 끕니다.
+
+기본 사용 방법부터 살펴 보겠습니다.
+
+- **ECHO**: ON/OFF 상태 확인
+- **ECHO ON\|OFF**: 다음 라인부터 ON\|OFF 상태
+- **ECHO \<message>**: 메시지 화면 출력
+- **ECHO.**: 빈 라인 출력
+- **@ :** ECHO OFF 상태에서 현재 라인 실행
+
+먼저 `ECHO`에는 아래와 같은 상태가 존재합니다.
+ - ON 상태 : 줄 단위 명령 실행 시 명령을 화면에 출력
+ - OFF 상태 : 줄 단위 명령 실행 시 명령을 화면에 출력하지 않음
+
+즉 상태의 차이는 줄 단위로 수행되는 명령라인을 출력하느냐 하지 않느냐 입니다.
+
+배치파일은 초기에 `ECHO ON` 상태로 실행됩니다. 따라서 기본 설정 없이 배치파일로 부터 명령어를 수행할 경우 해당 명령이 화면에 출력되어 나타납니다.
+
+아래의 실행결과를 보겠습니다.
+
+<details>
+<summary>예시) 접기/펼치기</summary>
+<div markdown="1">
+
+**`run.bat` 파일**
+```batch
+ECHO "Hello world!"
+```
+
+**결과**
+```batch
+C:\> run.bat
+C:\> ECHO "Hello world!"
+"Hello world!"
+```
+
+결과에서 보여지는 것처럼 초기는 `ECHO ON` 상태이므로 각 명령어 라인이 출력되면서 명령어 수행 결과도 보여집니다.
+
+이제 `ECHO OFF` 상태와 비교해 보겠습니다.
+
+**`run.bat` 파일**
+```batch
+ECHO OFF
+ECHO "Hello world!"
+```
+
+**결과**
+```batch
+C:\> run.bat
+C:\> ECHO OFF
+"Hello world!"
+```
+
+`ECHO OFF` 명령어를 통해 다음라인의 명령어는 출력되지 않고 명령 수행 결과만 출력되었습니다.
+
+나머지에 대해서도 살펴보겠습니다.
+
+**`run.bat` 파일**
+```batch
+@ECHO OFF
+ECHO "Hello world!"
+ECHO.
+```
+
+**결과**
+```batch
+C:\> run.bat
+"Hello world!"
+
+```
+
+`@` 를 통해 `ECHO OFF` 역시 명령어도 출력이 되지 않고 결과로 `"Hello world"` 문자열 및 빈 라인 `""`만 출력되었습니다.
+
+</div>
+</details>
+
+#### 주석 처리
+
+배치 파일 내에 주석을 작성할 수 있는 다양한 방법이 존재합니다.
+
+- **REM \<comments>**: REM 명령어 뒤에 주석 추가
+- **:UNUSED_LABEL \<comments>** : 사용하지 않는 라벨을 지정하고, 그 뒤에 설명
+- **:: \<comments>** : 라벨로:를 사용하고, 그 뒤에 설명
+
+모두, 선행공간(leading spaces) 허용하며 그 외 문자는 문장 앞에 올 수 없습니다.
+
+`REM` 명령어 외 라벨 지정 방법을 이용한 주석 사용 시 주의할 점은 `FOR`문이나 `IF`문의 블록 안에서 사용 시 에러가 발생하므로 사용할 수 없다는 점입니다.
+
+사용 예를 살펴보겠습니다.
+
+```batch
+REM 배치파일 사용설명 글입니다.
+:UNUSED_LABEL 배치파일 사용설명 글입니다.
+:: 배치파일 사용설명 글입니다.
+```
+
+#### GOTO
+
+`GOTO` 명령어 다음에 오는 레이블로 커맨드 실행라인을 이동합니다.
+(C/CPP의 goto문과 같은 원리)
+
+`GOTO` 명령어 다음에 올 레이블명은 공백이나 세미콜론(;), 이퀄(=)과 같은 기호는 포함하지 않아야하며, 콜론(:)으로 시작하며 한 행에 입력해야 합니다.
+
+#### LABEL
+
+GOTO와 함께 사용이 되어, 특정 레이블로 제어를 이동하기 위해 사용합니다.
+
+#### IF
+
+배치파일의 조건 처리를 수행하기 위해 사용합니다.
+
+기본 사용 방법부터 살펴 보겠습니다.
+
+- **IF NOT**  
+조건이 거짓이면 명령 수쟁  
+- **IF ERRORLEVEL \<number> \<command>**  
+프로그램 반환 코드가 지정 숫자보다 크거나 같으면 조건을 참으로 지정
+- **IF \<string1> \<compare-op> \<string2> \<command>**  
+두 문자열이 일치하면 조건을 참으로 지정
+- **IF EXIST \<filename> \<command>**  
+지정된 파일 이름이 있으면 조건을 참으로 지정
+- **IF DEFINED \<variable> \<command>**  
+variable이 정의 되어 있다면 조건을 참으로 지정
+
+문자열 비교시 /i를 붙이면 대소문자 구분을 하지 않는 (case-insensitive) 비교를 수행합니다.
+
+`compare-op`에는 아래의 옵션이 가능합니다.
+
+- EQU \| ==: equal
+- NEQ: not equal
+- LSS: less than
+- LEQ: less than or equal
+- GTR: greater than
+- GEQ: greater than or equal
+
+몇 가지 예제를 살펴보겠습니다.
+
+<details>
+<summary>예시) 접기/펼치기</summary>
+<div markdown="1">
+
+
+**`run.bat` 파일**
+```batch
+@ECHO OFF
+IF ERRORLEVEL 0 (
+  ECHO Successful!!
+) ELSE (
+  ECHO Failed
+)
+```
+
+**결과**
+```batch
+C:\> run
+Successful!!
+```
+
+**`run.bat` 파일**
+
+```batch
+@ECHO OFF
+IF EXIST %windir%\syswow64 (
+  ECHO x64
+) ELSE (
+  ECHO x86
+)
+```
+
+**결과**
+
+```batch
+C:\> run
+x64
+```
+_저의 운영체제가 64비트 입니다. 86비트 운영체제의 경우 x86 출력됩니다._
+
+</div>
+</details>
+
+#### FOR
+
+조건에 의해 for 반복문 수행
+
+```batch
+FOR %\<variable> IN (\<set>) DO \<command> \<command-parameters>
+```
+- **%<variable>**: 매개 변수를 위한 문자 지정
+- **(\<set>)**: 반복문에 대한 조건(파일, 범위 등) 지정, 와일드카드 사용 가능
+- **\<command>**: 각 반복문에서 수행할 명령 지정
+- **\<command-parameters>**: 지정된 명령의 매개 변수나 스위치 지정
+
+**옵션**
+- **tokens=**
+
+몇 가지 예제를 살펴보겠습니다.
+
+<details>
+<summary>예시) 접기/펼치기</summary>
+<div markdown="1">
+
+**`run.bat` 파일**
+```batch
+@ECHO OFF
+FOR %%I IN (*.bat) DO TYPE %%I
+```
+
+**결과**
+```batch
+C:\> run
+@ECHO OFF
+FOR %%I IN (*.bat) DO TYPE %%I
+```
+_현재 경로에 `run.bat` 하나만 있을 경우를 예로 들었습니다._
+
+배치파일에서는 변수명 앞에 `%`를 두 개 사용하지만 커맨드 창에서는 하나만 사용하면 됩니다.
+
+**커맨드 창에서 실행**
+```batch
+C:\> FOR %I IN (*.bat) DO TYPE %I
+
+C:\> TYPE run.bat
+@ECHO OFF
+FOR %%I IN (*.bat) DO TYPE %%I
+```
+
+
+</div>
+</details>
+
+#### %숫자
+
+도스창의 프롬프트에서 배치파일을 실행시킬 때의 인자들을, 배치파일내에서 사용하기 위함이다.
 
 첫번째 인자를 %0, 두번째 인자를 %1, ....이런식으로 받아들인다. 따라서 %0~%9 까지 받아들인다.
 
@@ -93,7 +396,7 @@ FOR %%A IN (%*) DO ( .... Now your batch file handles %%A instead of %1 ....) : 
 
 **&& :**  command1 && command2 : command1의 실행이 성공적으로 끝나는 경우에만, command2를 실행한다.
 
-**|| :**  command1 || command2 : command1의 실행이 실패로 끝나는 경우에만, command2를 실행한다.
+**\|\| :**  command1 \|\| command2 : command1의 실행이 실패로 끝나는 경우에만, command2를 실행한다.
 
 **CALL :** 배치파일내에서 다른 배치파일을 호출하기 위함이다.
 
@@ -142,107 +445,11 @@ Echo 계산된 값은
 
 SET tempvar2 : 7이 출력이 된다. (주의! tempvar2 다음에 바로 줄바꿈이 와야 한다.)
 
-**IF 문 :**
 
-IF
-
-[NOT] ERRORLEVEL _number command_
-
-IF
-
-[NOT] _string1_==_string2 command_
-
-IF
-
-[NOT] EXIST _filename command_
-
-NOT
-
-Specifies that Windows should carry out the _command_ only if the condition is FALSE
-
-ERRORLEVEL number
-
-Specifies a TRUE condition
-
-if the last program run returned an exit code equal to or greater than the _number_ specified.
-
-_string1_==_string2_
-
-Specifies a TRUE condition if the specified text strings match.
-
-EXIST _filename_
-
-Specifies a TRUE condition if the specified _filename_ exists.
-
-_command_
-
-Specifies the _command_ to carry out if the condition is met.  
-_command_ can be followed by `ELSE _command2_` which will execute _command2_ if the specified condition is FALSE
-
-IF [/I] _string1 compare-op string2 command_ ( /I 를 붙이면 case-insensitive 문자열 비교가 된다.)  
-where `_compare-op_` may be one of :
-
-EQU
-
--
-
-equal (or string1 == string2 )
-
-NEQ
-
--
-
-not equal
-
-LSS
-
--
-
-less than
-
-LEQ
-
--
-
-less than or equal
-
-GTR
-
--
-
-greater than
-
-GEQ
-
--
-
-greater than or equal
-
-IF DEFINED _variable command_ : variable이 정의가 되어 있다면, command를 실행한다.
 
 **EXIT :** exit를 실행시키면, cmd.exe까지 모두 종료시켜버린다.
 
 만일 배치파일만 종료를 시키고 싶다면, Exit /B를 하면 된다.
-
-**Comments 처리 :** 배치파일내에, 코드가 아닌, 단순한 설명문을 넣고자 할 때 다음과 같은 여러가지 방법이 있다.
-
-( [http://www.robvanderwoude.com/comments.php](http://www.robvanderwoude.com/comments.php))
-
-아래와 같은 방법으로 사용하면 된다.
-
-**REM comments**
-
-**:unused_label comments** : 사용하지 않는 label을 지정하고, 그 뒤에 설명을 달면 된다.
-
-**:: comments** : 사용하지 않는 label로써, :를 사용한 것 뿐이다.
-
-(위의 3가지 방법들은 모두, leading spaces를 허용한다. 그 외의 것은 위의 문장들 앞에 올 수가 없다.)
-
-그런데 **:unused_label**와 **::**는 조심을 해야 할 점이 있다. 그것은 For문의 command블록 또는 IF문의 command블록안에서
-
-이 것들을 사용하게 되면 에러가 발생을 하기 때문이다.
-
-이럴때는 이 것들을 아예 For문 또는 IF문 밖으로 빼 내거나 또는 REM문을 사용하면 된다.
 
 **DEL :** 지정한 파일들을 삭제한다.
 

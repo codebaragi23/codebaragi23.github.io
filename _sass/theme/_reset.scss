@@ -58,6 +58,21 @@ section {
   display: block;
 }
 
+details {
+  border-bottom: 1px solid $border-color;
+
+  :focus {
+    outline: none;
+  }
+}
+
+summary {
+  margin-bottom: 1em;
+
+  cursor: pointer;
+  user-select: none;
+}
+
 /* Display block in IE6-9 and FF3 */
 
 audio,

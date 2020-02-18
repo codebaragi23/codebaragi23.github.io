@@ -248,6 +248,18 @@ defaults:
       share: false
       sidebar:
         nav: "DeepLearningFromScratch"
+  - scope:
+      path: "_books/DeepLearningWithPython"
+      type: books
+    values:
+      layout: single
+      author_profile: false
+      write_date: false
+      read_time: false
+      comments: true
+      share: false
+      sidebar:
+        nav: "DeepLearningWithPython"
 
 # Reading Files
 include:

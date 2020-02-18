@@ -11,8 +11,8 @@ header:
     - label: About me
       url : /about/
 excerpt: >
-  개인 블로그를 운영할까 합니다.<br />
-  개발 노하우 및 공부 자료 위주로 정리할까 하는데 개발자 분들께 참고가 되었으면 좋겠네요.<br />
+  개인 블로그를 운영할까 합니다.<br/>
+  개발 노하우 및 공부 자료 위주로 정리할까 하는데 개발자 분들께 참고가 되었으면 좋겠네요.<br/>
 
 feature_row_env:
   - overlay_image: /assets/images/category/dev_env/git/background-teaser.png
@@ -27,8 +27,10 @@ feature_row_env:
     overlay_filter: 0.5
     title: Script
     alt: Script
-    excerpt: 개발하면서 간단히 제작할 수 있는 스크립트에 대한 내용을 정리하고자 합니다. 윈도우 batch 및 리눅스 bash 등을 정리하고자 합니다.
-    url: /Script/
+    excerpt: >
+      개발하면서 간단히 제작할 수 있는 bat, vbs, ps1 등의 스크립트에 대한 내용을 정리하고자 합니다. <br/>
+      배치 파일 보다는 쉘 스크립트가 좀 더 많은 기능을 구현할 수 있고 가장 최근 공개까지 된 파워쉘이 가장 많은 기능을 구현 할 수 있습니다.
+    url: /script/
     btn_class: btn--primary
 
 feature_row_lang:

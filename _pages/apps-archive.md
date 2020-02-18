@@ -62,7 +62,7 @@ feature_row_web:
 
   #   title: 양력↔음력 변환
   #   excerpt: >
-  #     기능 1. 양력/음력 변환<br />
+  #     기능 1. 양력/음력 변환<br/>
   #     기능 2. 음력 일정을 반복적으로 추가하여 일정 파일(.ics) 생성
   #   url: https://github.com/codebaragi23/LunarCalendarGenerator/releases/latest/download/LunarCalendarGenerator.exe
   #   btn_label: 이동

@@ -20,7 +20,7 @@ icon: fa-github
 
 `Visual Studio`(이하 VS)에서 특히, `multi-thread` 환경에서 개발을 하다보면 윈도우의 `작업 관리자`(Task Manager)에서 종료하여도 빌드하려고 하면 아래와 같은 에러를 종종 만나게 됩니다.
 
-```
+```bash
 LINK : fatal error LNK1168: cannot open <file>.exe for writing
 ```
 

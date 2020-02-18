@@ -89,14 +89,14 @@
 ///
 ///   - `susy-repeat(8)`:
 ///     an 8-column, symmetrical, fluid grid.
-///     <br />Identical to `(1 1 1 1 1 1 1 1)`.
+///     <br/>Identical to `(1 1 1 1 1 1 1 1)`.
 ///   - `susy-repeat(6, 8em)`:
 ///     a 6-column, symmetrical, em-based grid.
-///     <br />Identical to `(8em 8em 8em 8em 8em 8em)`.
+///     <br/>Identical to `(8em 8em 8em 8em 8em 8em)`.
 ///   - `(300px susy-repeat(4) 300px)`:
 ///     a 6-column, asymmetrical, mixed fluid/static grid
 ///     using `calc()` output.
-///     <br />Identical to `(300px 1 1 1 1 300px)`.
+///     <br/>Identical to `(300px 1 1 1 1 300px)`.
 ///
 ///   **NOTE** that `12` is no longer a valid 12-column grid definition,
 ///   and you must list all the columns individually
