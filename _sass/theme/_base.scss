@@ -62,14 +62,13 @@ h6 {
 small,
 .small {
   font-size: $type-size-6;
-  word-break: keep-all;
 }
 
 p {
   margin-bottom: 1.3em;
   font-size: $type-size-6;
-  word-break: keep-all;
 }
+
 
 u,
 ins {
@@ -203,7 +202,7 @@ hr {
   display: block;
   margin: 1em 0;
   border: 0;
-  border-top: 1px solid $border-color;
+  border-top: 3px solid $border-color;
 }
 
 /* lists */

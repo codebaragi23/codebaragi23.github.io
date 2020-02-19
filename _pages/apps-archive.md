@@ -2,7 +2,7 @@
 title: Applications
 layout: splash
 permalink: /apps/
-taxonomy: apps
+taxonomy: Apps
 
 entries_layout: grid
 classes: wide

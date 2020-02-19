@@ -75,9 +75,9 @@ DeepLearningWithPython:
         url: /books/DeepLearningWithPython/Part1/Chapter2/2.1/
       - title: 2.2 신경망을 위한 데이터 표현
         url: /books/DeepLearningWithPython/Part1/Chapter2/2.2/
-      - title: 2.3 신경망의 톱니바퀴-텐서 연산
+      - title: 2.3 신경망의 톱니바퀴:텐서 연산
         url: /books/DeepLearningWithPython/Part1/Chapter2/2.3/
-      - title: 2.4 신경망의 엔진-그래디언트 기반 최적화
+      - title: 2.4 신경망의 엔진:그래디언트 기반 최적화
         url: /books/DeepLearningWithPython/Part1/Chapter2/2.4/
       - title: 2.5 첫 번째 예제 다시 살펴보기
         url: /books/DeepLearningWithPython/Part1/Chapter2/2.5/
@@ -93,11 +93,13 @@ DeepLearningWithPython:
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.2/
       - title: 3.3 딥러닝 컴퓨터 셋팅
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.3/
-      - title: 3.4 영화 리뷰 분류-이진 분류 예제
+      - title: 3.4 영화 리뷰 분류:이진 분류 예제
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.4/
-      - title: 3.5 뉴스 기사 분류-다중 분류 문제
+      - title: 3.5 뉴스 기사 분류:다중 분류 문제
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.5/
-      - title: 3.6 주택 가격 예측-회귀 문제
+      - title: 3.6 주택 가격 예측:회귀 문제
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.6/
       - title: 3.7 요약
         url: /books/DeepLearningWithPython/Part1/Chapter3/3.7/
+
+  

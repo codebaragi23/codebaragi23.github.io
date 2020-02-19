@@ -2,7 +2,7 @@
 title: Books
 layout: splash
 permalink: /books/
-taxonomy: books
+taxonomy: Books
 
 entries_layout: grid
 classes: wide
