@@ -249,7 +249,7 @@ defaults:
       sidebar:
         nav: "DeepLearningFromScratch"
   - scope:
-      path: "_books/DeepLearningWithPython"
+      path: "_books/DeepLearningFromKeras"
       type: books
     values:
       layout: single
@@ -259,7 +259,7 @@ defaults:
       comments: true
       share: false
       sidebar:
-        nav: "DeepLearningWithPython"
+        nav: "DeepLearningFromKeras"
 
 # Reading Files
 include:

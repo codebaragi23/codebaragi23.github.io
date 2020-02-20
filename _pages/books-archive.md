@@ -38,7 +38,7 @@ DeepLearning:
     title: Deep Learning Width Python
     alt: Deep Learning Width Python
     excerpt: 케라스 창시자에게 배우는 딥러닝
-    url: /books/DeepLearningWithPython/summary/
+    url: /books/DeepLearningFromKeras/summary/
     btn_class: btn--primary
 ---
 

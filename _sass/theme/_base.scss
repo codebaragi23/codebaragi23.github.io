@@ -376,8 +376,8 @@ input[type="submit"],
 
 *[id]:before {
   display: block;
-  content: " ";
-  margin-top: -60px;
+  content: '';
   height: 60px;
+  margin-top: -60px;
   visibility: hidden;
 }

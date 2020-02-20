@@ -21,14 +21,9 @@ $(document).ready(function() {
     }
   };
 
-  stickySideBar();
-
-  $(window).resize(function() {
-    stickySideBar();
-  });
-
-  $(window).scroll(function() {
-    if ($(".masthead").offset().top > 50) {
+  var AnimateHeader = function() {
+    var sy = window.pageYOffset || document.documentElement.scrollTop;
+    if (sy >= 50) {
         $(".masthead").addClass("short");
         $(".site-logo").fadeOut(500);
         $(".site-subtitle").fadeOut(500);
@@ -37,7 +32,18 @@ $(document).ready(function() {
         $(".site-logo").fadeIn(500);
         $(".site-subtitle").fadeIn(500);
     }
-});
+  }
+
+  stickySideBar();
+  AnimateHeader();
+
+  $(window).resize(function() {
+    stickySideBar();
+  });
+
+  $(window).scroll(function() {
+    AnimateHeader();
+  });
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function() {
@@ -72,13 +78,14 @@ $(document).ready(function() {
     }, 400);
   });
 
-  // Smooth scrolling
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    offset: 20,
-    speed: 400,
-    speedAsDuration: true,
-    durationMax: 500
-  });
+  // TODO: 각주 스크롤 수정 필요
+  // // Smooth scrolling
+  // var scroll = new SmoothScroll('a[href*="#"]', {
+  //   offset: 20,
+  //   speed: 400,
+  //   speedAsDuration: true,
+  //   durationMax: 500
+  // });
 
   // Gumshoe scroll spy init
   if($("nav.toc").length > 0) {

@@ -37,7 +37,7 @@
   *
   * .element::after {
   *   clear: both;
-  *   content: "";
+  *   content: '';
   *   display: table;
   * }
 */
@@ -47,7 +47,7 @@
 
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 }

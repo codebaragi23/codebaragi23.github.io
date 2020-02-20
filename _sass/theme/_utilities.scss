@@ -340,7 +340,7 @@ body:hover .visually-hidden button {
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     width: $navicon-width;
@@ -439,7 +439,7 @@ body:hover .visually-hidden button {
 
   &:before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     width: 100%;
