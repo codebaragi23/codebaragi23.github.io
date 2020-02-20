@@ -8,7 +8,6 @@ codekit-config.json
 npm-debug.log*
 vendor/bundle
 
-_books
 _tmp
 banner.js
 package.json
