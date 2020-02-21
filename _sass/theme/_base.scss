@@ -373,13 +373,3 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
-
-// *[id] {
-//   &:before {
-//     display: block;
-//     content: '';
-//     height: 60px;
-//     margin-top: -60px;
-//     visibility: hidden;
-//   }
-// }
