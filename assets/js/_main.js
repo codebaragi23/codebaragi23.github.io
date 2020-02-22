@@ -184,8 +184,14 @@ $(document).ready(function() {
      * Modify as appropriate to allow for dynamic calculations
      */
     getHeaderOffset: function() {
-      return this.OFFSET_HEIGHT_PX;
+      if (document.getElementsByClassName('masthead short').length==0) {
+        document.getElementsByClassName('site-subtitle')[0].style.display="none";
+      }
+
+      //return this.OFFSET_HEIGHT_PX;
       //return document.getElementsByClassName('masthead')[0].offsetHeight + this.HEADER_MAGIN;
+      style = window.getComputedStyle(document.getElementsByClassName('site-title')[0]);
+      return parseInt(style.marginTop) + parseInt(style.marginBottom) + parseInt(style.height) + this.HEADER_MAGIN;
     },
 
     /**
