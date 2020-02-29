@@ -63,8 +63,8 @@ $(document).ready(function() {
 
   // when clicking on a dropdown navbar menu, show the child links
   $(".masthead__menu-item").on("click", ".item-link", function() {
-    if ($(".item-link").hasClass("dropdown")) {
-      $(".masthead__menu-item-child").toggleClass("is--visible");
+    if ($(this).hasClass("dropdown")) {
+      $(this).next().toggleClass("is--visible");
     }
   });
 
