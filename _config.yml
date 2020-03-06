@@ -246,6 +246,7 @@ defaults:
       read_time: false
       comments: true
       share: false
+      related:
       sidebar:
         nav: "DeepLearningFromScratch"
   - scope:
@@ -258,6 +259,7 @@ defaults:
       read_time: false
       comments: true
       share: false
+      related:
       sidebar:
         nav: "DeepLearningFromKeras"
 

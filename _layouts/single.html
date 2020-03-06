@@ -102,7 +102,7 @@ layout: default
         {% endfor %}
       </div>
     </div>
-  {% else if page.id and page.related=="tags" and site.posts.size > 0 %}
+  {% elsif page.id and page.related=="tags" and site.posts.size > 0 %}
     <div class="page__related">
       <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Related Posts" }}</h4>
       <div class="grid__wrapper">

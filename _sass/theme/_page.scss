@@ -242,6 +242,24 @@ body {
   }
 }
 
+
+/*
+   Jupyter syntax
+   ========================================================================== */
+.prompt {
+  font-size: $type-size-6;
+  color: $focus-color;
+}
+
+.input_area, .output_stream, .output_data_text, .output_traceback_line {
+  margin-left: 1.5rem;
+}
+
+.output_stream, .output_data_text, .output_traceback_line {
+  background-color: $background-color !important;
+  color: $text-color !important;
+}
+
 /*
    Social sharing
    ========================================================================== */

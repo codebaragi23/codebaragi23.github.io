@@ -32,7 +32,7 @@
                 </div>
               </li>
               {% continue %}
-            {%- else if link.url contains '://' -%}
+            {%- elsif link.url contains '://' -%}
               {%- assign url = link.url -%}
             {%- else -%}
               {%- assign url = link.url | relative_url -%}
