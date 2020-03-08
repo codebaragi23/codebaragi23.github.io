@@ -294,6 +294,7 @@ exclude:
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
   - _tmp
+  - "*.h5"
   - datasets
 keep_files:
   - .git

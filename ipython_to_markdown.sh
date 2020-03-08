@@ -15,3 +15,4 @@ rm -rf ${FNAME}_files
 
 # change image paths
 sed -i -e "s:!\[svg\](${FNAME}_files/:!\[표시 할 수 없음\](${IMG_PATH}/:g" -e "s:.svg):.png):g" ${FNAME}.md
+sed -i -e "s:!\[png\](${FNAME}_files/:!\[표시 할 수 없음\](${IMG_PATH}/:g" -e "s:.svg):.png):g" ${FNAME}.md
