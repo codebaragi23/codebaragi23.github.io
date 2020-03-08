@@ -42,11 +42,11 @@ icon: fa-github
 
 일단 휴대폰에 [개발자모드]의 [UBS디버깅]을 허용시켜 줘야하는데 순서는 다음과 같다.
 
-![](https://k.kakaocdn.net/dn/9owgB/btqznPd46hZ/1KcPRm3vjIGpzhWFKG50k1/img.jpg)
+![표시할 수 없음](https://k.kakaocdn.net/dn/9owgB/btqznPd46hZ/1KcPRm3vjIGpzhWFKG50k1/img.jpg)
 
 #하단 왼쪽에 있는거처럼 빌드번호를 7번 터치하면 개발자 옵션이 활성화 된다.
 
-![](https://k.kakaocdn.net/dn/y2tzi/btqznuuuiwN/oU3F7XxoInLbA2W2Ld6lYk/img.jpg)
+![표시할 수 없음](https://k.kakaocdn.net/dn/y2tzi/btqznuuuiwN/oU3F7XxoInLbA2W2Ld6lYk/img.jpg)
 
 #[개발자옵션]에 들어가서 [USB디버깅] 사용
 
@@ -64,17 +64,17 @@ Android SDK 플랫폼 도구는 Android SDK의 구성요소입니다.
 
 developer.android.com
 
-![](https://k.kakaocdn.net/dn/dbIsVH/btqzqT0csVf/wyITBkKHCMQYocDTVogqvK/img.png)
+![표시할 수 없음](https://k.kakaocdn.net/dn/dbIsVH/btqzqT0csVf/wyITBkKHCMQYocDTVogqvK/img.png)
 
 #이런 파일이 하나 생기는데 여기서 adb.exe를 실행시켜주자
 
-![](https://k.kakaocdn.net/dn/bxplKg/btqzpW38UAN/32iQBVy55V9A79ZVfgTexK/img.png)
+![표시할 수 없음](https://k.kakaocdn.net/dn/bxplKg/btqzpW38UAN/32iQBVy55V9A79ZVfgTexK/img.png)
 
 #그리고 나서 shift+오른쪽마우스클릭 하면 PowerShell 창열기 탭을 클릭
 
 **여기서 스맛폰과 컴퓨터를 연결해 주는데, 연결시 스마트폰에 '디버그 모드를 허용하시겠습니까?' 라고 묻는 탭을 허용해주자.**
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb5kztU%2FbtqzprwOYxe%2FJZzbwepUyYBdpZ40FK2HD0%2Fimg.png)
+![표시할 수 없음](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb5kztU%2FbtqzprwOYxe%2FJZzbwepUyYBdpZ40FK2HD0%2Fimg.png)
 연결후에 'adb devices'라고 입력하면 'List of devices attached' 아래에 내 스맛폰이 연결되어있다고 한줄 뜬다.  
   
 PowerShell에서 연결을 확인 했다면 'adb shell settings put system csc_pref_camera_forced_shuttersound_key 0' 라는 명령어를 입력하고 ENTER를 치면 끝. (스크린샷처럼 아무런 메세지가 뜨지 않으면 성공)

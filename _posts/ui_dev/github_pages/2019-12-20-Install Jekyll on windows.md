@@ -29,7 +29,7 @@ GitHub Pages로 블로그를 운영하면서 theme를 customize할 필요가 없
 
 루비가 먼저 설치되고 (PATH 설정 포함) 이어서 개발자 킷 설치 과정이 이루어집니다.
 
-![][pic1]
+![표시할 수 없음][pic1]
 
 
 
@@ -37,13 +37,13 @@ GitHub Pages로 블로그를 운영하면서 theme를 customize할 필요가 없
 
 저는 C:\Program File\ 하위의 경로에 설치하며 "multiple target patterns" 에러 메시지를 보고 한참동안이나 검색하기도 했습니다.
 
-![][pic2]
+![표시할 수 없음][pic2]
 
 ## 2. 지킬 (Jekyll) 설치하기
 
 루비가 설치가 정상적으로 완료되면, 이제 지킬을 설치해야합니다. 먼저 윈도우 검색창에서 Ruby를 검색 후 Start Command Prompt with Ruby를 실행합니다.
 
-![][pic3]
+![표시할 수 없음][pic3]
 
 콘솔창에서 gem 명령어를 통해 지킬과 실행에 필요한 패키지들을 설치합니다.
 
@@ -80,7 +80,7 @@ jekyll serve
 
 코드 실행 결과는 다음과 같습니다.
 
-![][pic4]
+![표시할 수 없음][pic4]
 
 브라우저를 열어 <http://127.0.0.1:4000/> 또는 <http://localhost:4000/>로 접속하면 로컬 상에서 블로그가 구현된 결과를 살펴 볼 수 있습니다.
 

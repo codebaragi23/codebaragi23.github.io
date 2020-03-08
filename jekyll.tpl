@@ -2,7 +2,11 @@
 
 {%- block header -%}
 ---
+{% if ':' in nb.cells[0].source[2:] %}
+title: "{{ nb.cells[0].source[2:] }}"
+{% else %}
 title: {{ nb.cells[0].source[2:] }}
+{% endif %}
 ---
 {%- endblock header -%}
 

@@ -93,11 +93,11 @@ DeepLearningFromKeras:
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.2/
       - title: 3.3 딥러닝 컴퓨터 셋팅
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.3/
-      - title: 3.4 영화 리뷰 분류:이진 분류 예제
+      - title: "3.4 영화 리뷰 분류: 이진 분류 예제"
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.4/
-      - title: 3.5 뉴스 기사 분류:다중 분류 문제
+      - title: "3.5 뉴스 기사 분류: 다중 분류 문제"
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.5/
-      - title: 3.6 주택 가격 예측:회귀 문제
+      - title: "3.6 주택 가격 예측: 회귀 문제"
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.6/
       - title: 3.7 요약
         url: /books/DeepLearningFromKeras/Part1/Chapter3/3.7/
@@ -134,5 +134,31 @@ DeepLearningFromKeras:
         url: /books/DeepLearningFromKeras/Part2/Chapter5/5.4/
       - title: 5.5 요약
         url: /books/DeepLearningFromKeras/Part2/Chapter5/5.5/
+
+  - title: 6장 텍스트와 시퀀스를 위한 딥러닝
+    url: /books/DeepLearningFromKeras/Part2/Chapter6/summary/
+    children:
+      - title: 6.1 텍스트 데이터 다루기
+        url: /books/DeepLearningFromKeras/Part2/Chapter6/6.1/
+      - title: 6.2 순환 신경망 이해하기
+        url: /books/DeepLearningFromKeras/Part2/Chapter6/6.2/
+      - title: 6.3 순환 신경망의 고급 사용법
+        url: /books/DeepLearningFromKeras/Part2/Chapter6/6.3/
+      - title: 6.4 컨브넷을 사용한 시퀀스 처리
+        url: /books/DeepLearningFromKeras/Part2/Chapter6/6.4/
+      - title: 6.5 요약
+        url: /books/DeepLearningFromKeras/Part2/Chapter6/6.5/
+
+  - title: 7장 딥러닝을 위한 고급 도구
+    url: /books/DeepLearningFromKeras/Part2/Chapter7/summary/
+    children:
+      - title: "7.1 Sequential 모델을 넘어서: 케라스의 함수형 API"
+        url: /books/DeepLearningFromKeras/Part2/Chapter7/7.1/
+      - title: 7.2 케라스 콜백과 텐서보드를 사용한 딥러닝 모델 검사와 모니터링
+        url: /books/DeepLearningFromKeras/Part2/Chapter7/7.2/
+      - title: 7.3 모델의 성능을 최대로 끌어올리기
+        url: /books/DeepLearningFromKeras/Part2/Chapter7/7.3/
+      - title: 7.4 요약
+        url: /books/DeepLearningFromKeras/Part2/Chapter7/7.4/
 
   
