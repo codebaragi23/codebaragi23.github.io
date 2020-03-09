@@ -112,6 +112,14 @@ body {
     word-break: keep-all;
   }
 
+  ul {
+    li {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
   /* paragraph indents */
   p {
     margin: 0 0 $indent-var;
