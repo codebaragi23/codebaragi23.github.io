@@ -58,7 +58,7 @@ DeepLearningFromKeras:
   - title: 1부 딥러닝의 기초
     url: /books/DeepLearningFromKeras/Part1/summary/
 
-  - title: 1장 헬로 파이썬
+  - title: 1장 딥러닝이란 무엇인가?
     url: /books/DeepLearningFromKeras/Part1/Chapter1/summary/
     children:
       - title: 1.1 인공지능과 머신러닝, 딥러닝

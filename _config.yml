@@ -246,6 +246,7 @@ defaults:
       read_time: false
       comments: true
       share: false
+      toc: true
       related:
       sidebar:
         nav: "DeepLearningFromScratch"
@@ -259,6 +260,7 @@ defaults:
       read_time: false
       comments: true
       share: false
+      toc: true
       related:
       sidebar:
         nav: "DeepLearningFromKeras"
