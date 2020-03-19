@@ -112,6 +112,14 @@ body {
     word-break: keep-all;
   }
 
+  ol {
+    li {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
   ul {
     li {
       p {

@@ -2,13 +2,14 @@
 
 {%- block header -%}
 ---
-{% if ':' in nb.cells[0].source[2:] %}
+{% if ':' in nb.cells[0].source[2:] -%}
 title: "{{ nb.cells[0].source[2:] }}"
-{% else %}
+{% else -%}
 title: {{ nb.cells[0].source[2:] }}
-{% endif %}
+{%- endif %}
 ---
-{%- endblock header -%}
+{%endblock header%}
+
 
 {% block in_prompt %}
 <div class="prompt input_prompt">

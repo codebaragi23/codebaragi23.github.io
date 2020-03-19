@@ -5,7 +5,8 @@
 {% endif %}
 
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  <!-- {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %} -->
+  {% assign title = post.title %}
 {% else %}
   {% assign title = post.title %}
 {% endif %}

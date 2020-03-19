@@ -28,7 +28,7 @@
                       {%- assign url = child.url | relative_url -%}
                     {%- endif -%}
                     <a class="item-link" href="{{ url }}" {% if child.description %}title="{{ child.description }}"{% endif %}>{{ child.title }}</a>      
-                  {%- endfor -%}        
+                  {%- endfor -%}
                 </div>
               </li>
               {% continue %}
