@@ -29,7 +29,7 @@ commit이란 ***'staged 상태에 있는 변경 내용들을 repository에 저�
   
 ### Commit으로 히스토리를 기록하자
 
-[![표시할 수 없음](http://postfiles1.naver.net/20160716_128/tmondev_1468637382464xhhKA_PNG/%BA%EA%B6%F3%BF%EC%C0%FA%BF%CD_%C0%A5%B1%E2%BC%FA_%B9%DF%C0%FC%C0%C7_%C8%F7%BD%BA%C5%E4%B8%AE_%BF%AC%C7%A5.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
+[![나타낼 수 없음](http://postfiles1.naver.net/20160716_128/tmondev_1468637382464xhhKA_PNG/%BA%EA%B6%F3%BF%EC%C0%FA%BF%CD_%C0%A5%B1%E2%BC%FA_%B9%DF%C0%FC%C0%C7_%C8%F7%BD%BA%C5%E4%B8%AE_%BF%AC%C7%A5.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
 
 > 브라우저와 웹기술 발전의 히스토리 연표 (출처 : The Evolution of the Web)
 
@@ -39,7 +39,7 @@ commit이란 ***'staged 상태에 있는 변경 내용들을 repository에 저�
 
 commit은  **작은 단위**로 하는 것이 좋다. 그런데 여기서 작다는 의미는 단순히 작다는 것이 아니고  **의미를 갖는**  더이상 쪼갤 수 없는 단위를 이야기 한다. 필자는 이런 단위를 atomic 이라고 부르길 좋아한다.
 
-[![표시할 수 없음](http://postfiles7.naver.net/20160716_294/tmondev_1468637398937yypY5_PNG/atomic.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
+[![나타낼 수 없음](http://postfiles7.naver.net/20160716_294/tmondev_1468637398937yypY5_PNG/atomic.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
 
 > atomic
 
@@ -52,7 +52,7 @@ atomic commit 단위는 커피숍을 자동화 하는 프로젝트를 예로 '�
 
 commit을 작게 하려면 기본적으로 개발 싸이클을 작게 가져가야 한다. 하지만 우리 개발자들은 알고 있다. 그 분(?)이 오셨을 때 흐름을 끊지 않고 개발하는 것이 얼마나 효율적인지.. 아마 그 분이 가신 후 정신차리고 commit을 하려고 보면 너무 많은 코드가 수정되어 있어 곤란할 때가 있을 것이다. 이런 경우에는 1부에서 살펴봤던 stage 영역을 잘 활용하면 이미 개발된 대량의 소스를 작은 여러개의 commit으로 나누는게 가능하다.
 
-[![표시할 수 없음](http://postfiles16.naver.net/20160716_271/tmondev_1468637416547usrXU_PNG/Sourcetree%BF%A1%BC%AD_hunk_line_%B4%DC%C0%A7%B7%CE_stage%BF%A1_add_%C7%CF%B4%C2%B9%FD.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
+[![나타낼 수 없음](http://postfiles16.naver.net/20160716_271/tmondev_1468637416547usrXU_PNG/Sourcetree%BF%A1%BC%AD_hunk_line_%B4%DC%C0%A7%B7%CE_stage%BF%A1_add_%C7%CF%B4%C2%B9%FD.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
 
 > SourceTree에서 hunk, line 단위로 stage에 add 하는법
 
@@ -60,6 +60,6 @@ SourceTree에서 보면 위와 같이 소스를 실컷 수정한 이후에 파�
 
 위 그림의 빨간 상자안의 버튼들이 바로 그것이다. 내가 작업한 소스들을 다시 한 번 살펴보면서 의미있는 작업내용들을 작은 단위로 뽑아서 아래와 같이 commit 할 수 있다. 단, 주의할 것은 반드시  **모든 commit은 빌드 및 동작 가능한 상태를 유지**해야 한다는 것이다.  
 
-[![표시할 수 없음](http://postfiles4.naver.net/20160716_243/tmondev_1468637424538yXFJ2_PNG/%C0%CF%BA%CE_line%B8%B8_stage%BF%A1_add%C7%D1_%B0%E1%B0%FA.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
+[![나타낼 수 없음](http://postfiles4.naver.net/20160716_243/tmondev_1468637424538yXFJ2_PNG/%C0%CF%BA%CE_line%B8%B8_stage%BF%A1_add%C7%D1_%B0%E1%B0%FA.png?type=w773)](http://blog.naver.com/PostView.nhn?blogId=tmondev&logNo=220763012361#)
 
 > 일부 line만 stage에 add한 결과

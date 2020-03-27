@@ -13,6 +13,9 @@ banner.js
 package.json
 package-lock.json
 
+### Jupyter ###
+*.h5
+
 ### Jekyll ###
 _site
 .sass-cache

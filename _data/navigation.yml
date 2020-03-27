@@ -6,6 +6,8 @@ main:
     url: /about/
   - title: "Category"
     children:
+      - title: Machine Learning
+        url: /machine_learning/
       - title: Git
         url: /git/
       - title: Script
@@ -39,7 +41,7 @@ main:
 # books links
 DeepLearningFromScratch:
   - title: 책 소개
-    url: /books/DeepLearningFromScratch/summary/
+    url: /books/DeepLearningFromScratch/0.summary/
 
   - title: Chapter 1 헬로 파이썬
     url: /books/DeepLearningFromScratch/Chapter1/
