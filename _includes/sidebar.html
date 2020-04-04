@@ -14,7 +14,7 @@
       {% endif %}
       {% if sidebar.title %}<h3>{{ sidebar.title }}</h3>{% endif %}
       {% if sidebar.text %}{{ sidebar.text | markdownify }}{% endif %}
-      {% if sidebar.nav %}{% include nav_list.html nav=sidebar.nav %}{% endif %}
+      {% if sidebar.nav %}{% include nav_list nav=sidebar.nav %}{% endif %}
     {% endfor %}
     {% if page.sidebar.nav %}
       {% include nav_list.html nav=page.sidebar.nav %}
