@@ -221,6 +221,7 @@ defaults:
       comments: true # true # blog comment
       share: true
       related: "categories" # "categories", "tags"
+      toc_ads: true
       
   # _pages
   - scope:
