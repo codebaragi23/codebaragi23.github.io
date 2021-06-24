@@ -78,6 +78,10 @@ ins {
   a {
     color: inherit;
   }
+
+  &.adsbygoogle {
+    border-bottom: none !important;
+  }
 }
 
 ol,
@@ -384,4 +388,5 @@ input[type="submit"],
 .google-ads {
   padding-top: 1em;
   margin-top: 1em;
+  text-align: center;
 }
